@@ -1,0 +1,137 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+
+namespace WindowsFormsControleFuncionários
+{
+    public partial class CadastrarGerente : Form
+    {
+        public CadastrarGerente()
+        {
+            InitializeComponent();
+        }
+
+        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
+        Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");
+
+        SqlCommand comando = new SqlCommand();
+
+        SqlDataReader dataType;
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal) {
+                this.WindowState = FormWindowState.Maximized;
+            } else if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void CadastrarGerente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            if (tbxNome.Text == "" || tbxEmail.Text == "" || tbxCPF.Text == "" || tbxSenha.Text == "" || tbxConfirmar.Text == "")
+            {
+                MessageBox.Show("Campos obrigatórios não preenchidos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else if (tbxConfirmar.Text != tbxSenha.Text)
+            {
+                //CONFIRMAÇÃO E SENHA / Lógica de igualdade de senha
+
+
+                MessageBox.Show("Campo 'Confirmar Senha' precisa ser igual informado acima!");
+                }
+            
+            else
+            {
+
+                try
+                {
+                    string nomeC = tbxNome.Text;
+                    string emailC = tbxEmail.Text;
+                    string cpfC = tbxCPF.Text;
+                    string senhaC = tbxSenha.Text;
+                    
+                    //comando.CommandText = "insert into usuarios values nome = ('" + tbxNome.Text + "') and email = ('" + tbxEmail.Text + "') and cpf = ('" + tbxCPF.Text + "') and senha = ('" + tbxSenha.Text + "') and confirmar_senha = ('" + tbxConfirmar.Text + "')";
+                    comando.CommandText = "insert into usuarios (nome, email, cpf, senha) values (@nome, @email, @cpf, @senha);";
+                    comando.Connection = conexao;
+                    comando.Parameters.Clear();
+                    comando.Parameters.AddWithValue("@nome", SqlDbType.Char).Value = nomeC;
+                    comando.Parameters.AddWithValue("@email", SqlDbType.Char).Value = emailC;
+                    comando.Parameters.AddWithValue("@cpf", SqlDbType.Char).Value = cpfC;
+                    comando.Parameters.AddWithValue("@senha", SqlDbType.Char).Value = senhaC;
+
+                    conexao.Open();
+
+                    int linhas = comando.ExecuteNonQuery();
+                    if (linhas > 0)
+                    {
+                        MessageBox.Show("Usuário cadastrado com sucesso!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário não foi cadastrado!");
+                    }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                    conexao.Close();
+                }
+                finally {
+                    conexao.Close();    
+                }
+            }
+        }
+
+        private void btnOlhoSenha_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbxSenha.UseSystemPasswordChar = false;
+        }
+
+        private void btnOlhoSenha_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbxSenha.UseSystemPasswordChar = true;
+        }
+
+        private void btnOlhoConfirmar_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbxConfirmar.UseSystemPasswordChar = false;
+        }
+
+        private void btnOlhoConfirmar_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbxConfirmar.UseSystemPasswordChar = true;
+        }
+    } 
+}
