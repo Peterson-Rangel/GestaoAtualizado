@@ -1,5 +1,5 @@
 ﻿namespace WindowsFormsControleFuncionários
-{
+{//Ai minha vuaida
     partial class Login
     {
         /// <summary>
