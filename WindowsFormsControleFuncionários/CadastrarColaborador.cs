@@ -16,7 +16,7 @@ namespace WindowsFormsControleFuncionários
     {
         public CadastrarColaborador()
         {
-            InitializeComponent();
+            InitializeComponent(); //dada
         }
 
         //SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=PetersonRangel; Password=Pokoloko1@.;
