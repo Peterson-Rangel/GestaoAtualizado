@@ -72,6 +72,12 @@
             this.tbxComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.btnCadastroColab = new System.Windows.Forms.Button();
+            this.tbxRetorno = new System.Windows.Forms.TextBox();
+            this.lblRetorno = new System.Windows.Forms.Label();
+            this.tbxEntrada = new System.Windows.Forms.TextBox();
+            this.lblEntrada = new System.Windows.Forms.Label();
+            this.tbxSaida = new System.Windows.Forms.TextBox();
+            this.lblSaida = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -198,7 +204,7 @@
             // 
             this.lblPeriodoColab.AutoSize = true;
             this.lblPeriodoColab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriodoColab.Location = new System.Drawing.Point(243, 229);
+            this.lblPeriodoColab.Location = new System.Drawing.Point(49, 499);
             this.lblPeriodoColab.Name = "lblPeriodoColab";
             this.lblPeriodoColab.Size = new System.Drawing.Size(62, 16);
             this.lblPeriodoColab.TabIndex = 22;
@@ -206,7 +212,7 @@
             // 
             // tbxPeriodo
             // 
-            this.tbxPeriodo.Location = new System.Drawing.Point(239, 248);
+            this.tbxPeriodo.Location = new System.Drawing.Point(45, 518);
             this.tbxPeriodo.Name = "tbxPeriodo";
             this.tbxPeriodo.Size = new System.Drawing.Size(152, 20);
             this.tbxPeriodo.TabIndex = 23;
@@ -316,7 +322,7 @@
             // 
             // tbxObservacao
             // 
-            this.tbxObservacao.Location = new System.Drawing.Point(241, 465);
+            this.tbxObservacao.Location = new System.Drawing.Point(448, 519);
             this.tbxObservacao.Name = "tbxObservacao";
             this.tbxObservacao.Size = new System.Drawing.Size(152, 20);
             this.tbxObservacao.TabIndex = 39;
@@ -325,7 +331,7 @@
             // 
             this.lblObservacao.AutoSize = true;
             this.lblObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservacao.Location = new System.Drawing.Point(245, 446);
+            this.lblObservacao.Location = new System.Drawing.Point(452, 500);
             this.lblObservacao.Name = "lblObservacao";
             this.lblObservacao.Size = new System.Drawing.Size(100, 16);
             this.lblObservacao.TabIndex = 38;
@@ -473,7 +479,7 @@
             this.btnCadastroColab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastroColab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastroColab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroColab.Location = new System.Drawing.Point(591, 499);
+            this.btnCadastroColab.Location = new System.Drawing.Point(609, 499);
             this.btnCadastroColab.Name = "btnCadastroColab";
             this.btnCadastroColab.Size = new System.Drawing.Size(133, 29);
             this.btnCadastroColab.TabIndex = 54;
@@ -481,11 +487,68 @@
             this.btnCadastroColab.UseVisualStyleBackColor = true;
             this.btnCadastroColab.Click += new System.EventHandler(this.btnCadastroColab_Click);
             // 
+            // tbxRetorno
+            // 
+            this.tbxRetorno.Location = new System.Drawing.Point(241, 248);
+            this.tbxRetorno.Name = "tbxRetorno";
+            this.tbxRetorno.Size = new System.Drawing.Size(152, 20);
+            this.tbxRetorno.TabIndex = 56;
+            // 
+            // lblRetorno
+            // 
+            this.lblRetorno.AutoSize = true;
+            this.lblRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetorno.Location = new System.Drawing.Point(245, 229);
+            this.lblRetorno.Name = "lblRetorno";
+            this.lblRetorno.Size = new System.Drawing.Size(62, 16);
+            this.lblRetorno.TabIndex = 55;
+            this.lblRetorno.Text = "Retorno";
+            // 
+            // tbxEntrada
+            // 
+            this.tbxEntrada.Location = new System.Drawing.Point(241, 465);
+            this.tbxEntrada.Name = "tbxEntrada";
+            this.tbxEntrada.Size = new System.Drawing.Size(152, 20);
+            this.tbxEntrada.TabIndex = 58;
+            // 
+            // lblEntrada
+            // 
+            this.lblEntrada.AutoSize = true;
+            this.lblEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrada.Location = new System.Drawing.Point(245, 446);
+            this.lblEntrada.Name = "lblEntrada";
+            this.lblEntrada.Size = new System.Drawing.Size(61, 16);
+            this.lblEntrada.TabIndex = 57;
+            this.lblEntrada.Text = "Entrada";
+            // 
+            // tbxSaida
+            // 
+            this.tbxSaida.Location = new System.Drawing.Point(241, 518);
+            this.tbxSaida.Name = "tbxSaida";
+            this.tbxSaida.Size = new System.Drawing.Size(152, 20);
+            this.tbxSaida.TabIndex = 60;
+            // 
+            // lblSaida
+            // 
+            this.lblSaida.AutoSize = true;
+            this.lblSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaida.Location = new System.Drawing.Point(245, 499);
+            this.lblSaida.Name = "lblSaida";
+            this.lblSaida.Size = new System.Drawing.Size(48, 16);
+            this.lblSaida.TabIndex = 59;
+            this.lblSaida.Text = "Saída";
+            // 
             // CadastrarColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.tbxSaida);
+            this.Controls.Add(this.lblSaida);
+            this.Controls.Add(this.tbxEntrada);
+            this.Controls.Add(this.lblEntrada);
+            this.Controls.Add(this.tbxRetorno);
+            this.Controls.Add(this.lblRetorno);
             this.Controls.Add(this.btnCadastroColab);
             this.Controls.Add(this.tbxComplemento);
             this.Controls.Add(this.lblComplemento);
@@ -527,6 +590,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastrarColaborador";
             this.Text = "CadastrarColaborador";
+            this.Load += new System.EventHandler(this.CadastrarColaborador_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
@@ -580,5 +644,11 @@
         private System.Windows.Forms.TextBox tbxComplemento;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.Button btnCadastroColab;
+        private System.Windows.Forms.TextBox tbxRetorno;
+        private System.Windows.Forms.Label lblRetorno;
+        private System.Windows.Forms.TextBox tbxEntrada;
+        private System.Windows.Forms.Label lblEntrada;
+        private System.Windows.Forms.TextBox tbxSaida;
+        private System.Windows.Forms.Label lblSaida;
     }
 }
