@@ -49,7 +49,6 @@
             this.lblInicioContrato = new System.Windows.Forms.Label();
             this.tbxEmailColab = new System.Windows.Forms.TextBox();
             this.lblEmailColab = new System.Windows.Forms.Label();
-            this.tbxStatus = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.tbxCargoAtual = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             this.lblLogradouro = new System.Windows.Forms.Label();
             this.tbxCep = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
-            this.tbxNumResidencia = new System.Windows.Forms.TextBox();
             this.lblNumResidencia = new System.Windows.Forms.Label();
             this.tbxComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
@@ -78,6 +76,9 @@
             this.lblEntrada = new System.Windows.Forms.Label();
             this.tbxSaida = new System.Windows.Forms.TextBox();
             this.lblSaida = new System.Windows.Forms.Label();
+            this.tbxNumResidencia = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -286,13 +287,6 @@
             this.lblEmailColab.TabIndex = 28;
             this.lblEmailColab.Text = "E-Mail";
             // 
-            // tbxStatus
-            // 
-            this.tbxStatus.Location = new System.Drawing.Point(241, 411);
-            this.tbxStatus.Name = "tbxStatus";
-            this.tbxStatus.Size = new System.Drawing.Size(152, 20);
-            this.tbxStatus.TabIndex = 35;
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -440,13 +434,6 @@
             this.lblCep.TabIndex = 40;
             this.lblCep.Text = "CEP";
             // 
-            // tbxNumResidencia
-            // 
-            this.tbxNumResidencia.Location = new System.Drawing.Point(609, 303);
-            this.tbxNumResidencia.Name = "tbxNumResidencia";
-            this.tbxNumResidencia.Size = new System.Drawing.Size(89, 20);
-            this.tbxNumResidencia.TabIndex = 50;
-            // 
             // lblNumResidencia
             // 
             this.lblNumResidencia.AutoSize = true;
@@ -479,7 +466,7 @@
             this.btnCadastroColab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastroColab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastroColab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroColab.Location = new System.Drawing.Point(609, 499);
+            this.btnCadastroColab.Location = new System.Drawing.Point(609, 510);
             this.btnCadastroColab.Name = "btnCadastroColab";
             this.btnCadastroColab.Size = new System.Drawing.Size(133, 29);
             this.btnCadastroColab.TabIndex = 54;
@@ -538,11 +525,42 @@
             this.lblSaida.TabIndex = 59;
             this.lblSaida.Text = "Saída";
             // 
+            // tbxNumResidencia
+            // 
+            this.tbxNumResidencia.Location = new System.Drawing.Point(609, 303);
+            this.tbxNumResidencia.Name = "tbxNumResidencia";
+            this.tbxNumResidencia.Size = new System.Drawing.Size(89, 20);
+            this.tbxNumResidencia.TabIndex = 50;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(249, 526);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 61;
+            // 
+            // cbxStatus
+            // 
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Ativo",
+            "Afastado (Licença)",
+            "Aviso Prévio",
+            "Demitido"});
+            this.cbxStatus.Location = new System.Drawing.Point(241, 411);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(152, 21);
+            this.cbxStatus.TabIndex = 63;
+            this.cbxStatus.SelectedIndexChanged += new System.EventHandler(this.cbxStatus_SelectedIndexChanged);
+            // 
             // CadastrarColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.cbxStatus);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tbxSaida);
             this.Controls.Add(this.lblSaida);
             this.Controls.Add(this.tbxEntrada);
@@ -568,7 +586,6 @@
             this.Controls.Add(this.lblObservacao);
             this.Controls.Add(this.tbxSalario);
             this.Controls.Add(this.lblSalario);
-            this.Controls.Add(this.tbxStatus);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.tbxCargoAtual);
             this.Controls.Add(this.lblCargo);
@@ -621,7 +638,6 @@
         private System.Windows.Forms.Label lblInicioContrato;
         private System.Windows.Forms.TextBox tbxEmailColab;
         private System.Windows.Forms.Label lblEmailColab;
-        private System.Windows.Forms.TextBox tbxStatus;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox tbxCargoAtual;
         private System.Windows.Forms.Label lblCargo;
@@ -639,7 +655,6 @@
         private System.Windows.Forms.Label lblLogradouro;
         private System.Windows.Forms.TextBox tbxCep;
         private System.Windows.Forms.Label lblCep;
-        private System.Windows.Forms.TextBox tbxNumResidencia;
         private System.Windows.Forms.Label lblNumResidencia;
         private System.Windows.Forms.TextBox tbxComplemento;
         private System.Windows.Forms.Label lblComplemento;
@@ -650,5 +665,8 @@
         private System.Windows.Forms.Label lblEntrada;
         private System.Windows.Forms.TextBox tbxSaida;
         private System.Windows.Forms.Label lblSaida;
+        private System.Windows.Forms.TextBox tbxNumResidencia;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxStatus;
     }
 }

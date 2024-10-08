@@ -54,7 +54,7 @@ namespace WindowsFormsControleFuncionários
         private void btnCadastroColab_Click(object sender, EventArgs e)
         {
             if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || tbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
-                || tbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
+                || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
                 || tbxObservacao.Text == string.Empty || tbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
                 || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text ==string.Empty)
             {
@@ -71,7 +71,7 @@ namespace WindowsFormsControleFuncionários
                     DateTime saida = DateTime.Parse(tbxSaida.Text);
                     string whatsApp = tbxWhatsApp.Text;
                     string eMail = tbxEmailColab.Text;
-                    string status = tbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
+                    string status = cbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
                     DateTime pausas = DateTime.Parse(tbxPausas.Text);
                     DateTime retorno = DateTime.Parse(tbxRetorno.Text);
                     double salario = double.Parse(tbxSalario.Text); //Tratamento de dados aqui? Sql Server == DECIMAL
@@ -156,6 +156,11 @@ namespace WindowsFormsControleFuncionários
         }
 
         private void CadastrarColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
