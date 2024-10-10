@@ -16,14 +16,19 @@ namespace WindowsFormsControleFuncionários
     {
         public CadastrarColaborador()
         {
-            InitializeComponent(); //dada
+            InitializeComponent();
         }
 
         //SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=PetersonRangel; Password=Pokoloko1@.;
         //Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");
 
-        SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=senac; Password=senac;
-        Initial Catalog=controle;Server=TAU0588417W10-1;Encrypt=false;");
+        /*SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588417W10-1;Encrypt=false;");*/
+
+        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588420W10-1;Encrypt=false;");
+
+        //ahj
 
 
 
@@ -53,9 +58,9 @@ namespace WindowsFormsControleFuncionários
 
         private void btnCadastroColab_Click(object sender, EventArgs e)
         {
-            if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || tbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
-                || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
-                || tbxObservacao.Text == string.Empty || tbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
+            if (tbxNomeColab.Text == string.Empty || mtbxCpfColab.Text == string.Empty || cbxPeriodo.Text == string.Empty || mtbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
+                || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || mtbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || mtbxInicioContrato.Text == string.Empty
+                || tbxObservacao.Text == string.Empty || mtbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
                 || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text ==string.Empty)
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos", "Cadastro Colaborador", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -65,20 +70,28 @@ namespace WindowsFormsControleFuncionários
                 try
                 {
                     string nomeColaborador = tbxNomeColab.Text;
-                    string cpfColaborador = tbxCpfColab.Text;
-                    string periodo = tbxPeriodo.Text;
+                    string cpfColaborador = mtbxCpfColab.Text;
+                    string periodo = cbxPeriodo.Text;
                     DateTime entrada = DateTime.Parse(tbxEntrada.Text);
                     DateTime saida = DateTime.Parse(tbxSaida.Text);
-                    string whatsApp = tbxWhatsApp.Text;
+                    string whatsApp = mtbxWhatsApp.Text;
                     string eMail = tbxEmailColab.Text;
                     string status = cbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
                     DateTime pausas = DateTime.Parse(tbxPausas.Text);
                     DateTime retorno = DateTime.Parse(tbxRetorno.Text);
-                    double salario = double.Parse(tbxSalario.Text); //Tratamento de dados aqui? Sql Server == DECIMAL
+                    
+                    string salariotexto = mtbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
+                    salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
+                    decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
+                    
                     string cargo = tbxCargoAtual.Text;
-                    DateTime inicioCont = DateTime.Parse(tbxInicioContrato.Text); //Tratamento de dados aqui? Sql Server == DATA
+                    cargotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
+                    decimal salario = decimal.Parse(cargotexto);
+                    
+                    DateTime inicioCont = DateTime.Parse(mtbxInicioContrato.Text); //Tratamento de dados aqui? Sql Server == DATA
+                    
                     string observ = tbxObservacao.Text;
-                    string cep = tbxCep.Text; //Não Adicionado na tabela SQL SERVER
+                    string cep = mtbxCep.Text; //Não Adicionado na tabela SQL SERVER
                     string logradouro = tbxLogradouro.Text;
                     int numResidencia = int.Parse(tbxNumResidencia.Text); //Tratamento de dados aqui? Sql Server == INT
                     string bairro = tbxBairro.Text;
@@ -163,6 +176,12 @@ namespace WindowsFormsControleFuncionários
         private void cbxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnteste_Click(object sender, EventArgs e)
+        {
+                       
+          
         }
     }
 }
