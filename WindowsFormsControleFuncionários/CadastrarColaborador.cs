@@ -59,7 +59,7 @@ namespace WindowsFormsControleFuncionários
         private void btnCadastroColab_Click(object sender, EventArgs e)
         {
             if (tbxNomeColab.Text == string.Empty || mtbxCpfColab.Text == string.Empty || cbxPeriodo.Text == string.Empty || mtbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
-                || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || mtbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || mtbxInicioContrato.Text == string.Empty
+                || cbxStatus.Text == string.Empty || mtbxPausas.Text == string.Empty || mtbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || mtbxInicioContrato.Text == string.Empty
                 || tbxObservacao.Text == string.Empty || mtbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
                 || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text ==string.Empty)
             {
@@ -70,28 +70,37 @@ namespace WindowsFormsControleFuncionários
                 try
                 {
                     string nomeColaborador = tbxNomeColab.Text;
-                    string cpfColaborador = mtbxCpfColab.Text;
+                    string cpfColaborador = mtbxCpfColab.Text; 
                     string periodo = cbxPeriodo.Text;
-                    DateTime entrada = DateTime.Parse(tbxEntrada.Text);
-                    DateTime saida = DateTime.Parse(tbxSaida.Text);
+
+                    //string horaEntrada = mtbxEntrada.Text; 
+                    //horaEntrada = salariotexto.Replace(":", "").Trim();//
+                    DateTime entrada = DateTime.Parse(mtbxEntrada.Text);
+                    
+                    //string horaSaida = mtbxSaida.Text;
+                    //horaSaida = horaSaida.ToString();
+                    DateTime saida = DateTime.Parse(mtbxSaida.Text);
+                    
                     string whatsApp = mtbxWhatsApp.Text;
                     string eMail = tbxEmailColab.Text;
                     string status = cbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
-                    DateTime pausas = DateTime.Parse(tbxPausas.Text);
-                    DateTime retorno = DateTime.Parse(tbxRetorno.Text);
+                    
+                    DateTime pausas = DateTime.Parse(mtbxPausas.Text);
+                    
+                    DateTime retorno = DateTime.Parse(mtbxRetorno.Text);
                     
                     string salariotexto = mtbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
                     salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
                     decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
-                    
+
                     string cargo = tbxCargoAtual.Text;
-                    cargotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
-                    decimal salario = decimal.Parse(cargotexto);
                     
-                    DateTime inicioCont = DateTime.Parse(mtbxInicioContrato.Text); //Tratamento de dados aqui? Sql Server == DATA
+                    string inicioCont = mtbxInicioContrato.Text;
+                    inicioCont = inicioCont.Replace("/", "-").Replace("/", "-").Trim();
+                    DateTime inicioContrato = DateTime.Parse(inicioCont); //Tratamento de dados aqui? Sql Server == DATA
                     
                     string observ = tbxObservacao.Text;
-                    string cep = mtbxCep.Text; //Não Adicionado na tabela SQL SERVER
+                    string cep = mtbxCep.Text; // fazer API
                     string logradouro = tbxLogradouro.Text;
                     int numResidencia = int.Parse(tbxNumResidencia.Text); //Tratamento de dados aqui? Sql Server == INT
                     string bairro = tbxBairro.Text;
@@ -100,7 +109,6 @@ namespace WindowsFormsControleFuncionários
                     string complemento = tbxComplemento.Text;
 
 
-                    //FALTA DECLARAR O RESTANTES DAS VARIAVEIS NO ADD.WITHVALLUE?
                     comando.CommandText = "insert into funcionarios(nome, cpf, whatsapp, email, data_contratacao, salario, status, observacao) values(@nome, @cpf, @whatsapp, @email, @dataInicio, @salario, @status, @observacao); " +
                         "insert into funcoes(funcao) values(@cargo); " +
                         "insert into enderecos_funcionarios (logradouro, numero, bairro, cidade, estado, complemento, cep) values(@logradouro, @numero, @bairro, @cidade, @estado, @complemento, @cep); " +
@@ -135,7 +143,6 @@ namespace WindowsFormsControleFuncionários
                     comando.Parameters.AddWithValue("@periodo", SqlDbType.Char).Value = periodo;
                     comando.Parameters.AddWithValue("@entrada", SqlDbType.Time).Value = entrada;
                     comando.Parameters.AddWithValue("@saida", SqlDbType.Time).Value = saida;
-
 
 
 
@@ -180,8 +187,23 @@ namespace WindowsFormsControleFuncionários
 
         private void btnteste_Click(object sender, EventArgs e)
         {
-                       
-          
+            //string horaSaida = mtbxSaida.Text; 
+            //horaSaida = horaSaida.ToString();
+            //DateTime saida = DateTime.Parse(mtbxSaida.Text); //esse não precisa
+
+            //string horaEntrada = mtbxEntrada.Text;
+            //horaEntrada = horaEntrada.Replace(":", "").Trim();
+            //DateTime entrada = DateTime.Parse(mtbxEntrada.Text); //apenas esse
+
+            string salariotexto = mtbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
+            salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
+            decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
+
+            //MessageBox.Show("Saída cadastrada");
+            //MessageBox.Show("Entrada cadastrada");
+            MessageBox.Show("Salário cadastrado");
+
+
         }
     }
 }

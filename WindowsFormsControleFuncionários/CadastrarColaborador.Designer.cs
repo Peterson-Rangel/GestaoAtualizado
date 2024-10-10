@@ -39,7 +39,6 @@
             this.tbxNomeColab = new System.Windows.Forms.TextBox();
             this.lblCpfColab = new System.Windows.Forms.Label();
             this.lblPeriodoColab = new System.Windows.Forms.Label();
-            this.tbxPausas = new System.Windows.Forms.TextBox();
             this.lblHoraPausas = new System.Windows.Forms.Label();
             this.lblWhatsAppColab = new System.Windows.Forms.Label();
             this.lblInicioContrato = new System.Windows.Forms.Label();
@@ -64,11 +63,8 @@
             this.tbxComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.btnCadastroColab = new System.Windows.Forms.Button();
-            this.tbxRetorno = new System.Windows.Forms.TextBox();
             this.lblRetorno = new System.Windows.Forms.Label();
-            this.tbxEntrada = new System.Windows.Forms.TextBox();
             this.lblEntrada = new System.Windows.Forms.Label();
-            this.tbxSaida = new System.Windows.Forms.TextBox();
             this.lblSaida = new System.Windows.Forms.Label();
             this.tbxNumResidencia = new System.Windows.Forms.TextBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -78,13 +74,11 @@
             this.mtbxInicioContrato = new System.Windows.Forms.MaskedTextBox();
             this.mtbxCep = new System.Windows.Forms.MaskedTextBox();
             this.mtbxSalario = new System.Windows.Forms.MaskedTextBox();
-            this.tbxCep = new System.Windows.Forms.TextBox();
-            this.tbxInicioContrato = new System.Windows.Forms.TextBox();
-            this.tbxPeriodo = new System.Windows.Forms.TextBox();
-            this.tbxSalario = new System.Windows.Forms.TextBox();
-            this.tbxWhatsApp = new System.Windows.Forms.TextBox();
-            this.tbxCpfColab = new System.Windows.Forms.TextBox();
             this.btnteste = new System.Windows.Forms.Button();
+            this.mtbxEntrada = new System.Windows.Forms.MaskedTextBox();
+            this.mtbxSaida = new System.Windows.Forms.MaskedTextBox();
+            this.mtbxPausas = new System.Windows.Forms.MaskedTextBox();
+            this.mtbxRetorno = new System.Windows.Forms.MaskedTextBox();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -210,13 +204,6 @@
             this.lblPeriodoColab.Size = new System.Drawing.Size(62, 16);
             this.lblPeriodoColab.TabIndex = 22;
             this.lblPeriodoColab.Text = "Período";
-            // 
-            // tbxPausas
-            // 
-            this.tbxPausas.Location = new System.Drawing.Point(241, 248);
-            this.tbxPausas.Name = "tbxPausas";
-            this.tbxPausas.Size = new System.Drawing.Size(152, 20);
-            this.tbxPausas.TabIndex = 27;
             // 
             // lblHoraPausas
             // 
@@ -441,13 +428,6 @@
             this.btnCadastroColab.UseVisualStyleBackColor = true;
             this.btnCadastroColab.Click += new System.EventHandler(this.btnCadastroColab_Click);
             // 
-            // tbxRetorno
-            // 
-            this.tbxRetorno.Location = new System.Drawing.Point(241, 303);
-            this.tbxRetorno.Name = "tbxRetorno";
-            this.tbxRetorno.Size = new System.Drawing.Size(152, 20);
-            this.tbxRetorno.TabIndex = 56;
-            // 
             // lblRetorno
             // 
             this.lblRetorno.AutoSize = true;
@@ -458,13 +438,6 @@
             this.lblRetorno.TabIndex = 55;
             this.lblRetorno.Text = "Retorno";
             // 
-            // tbxEntrada
-            // 
-            this.tbxEntrada.Location = new System.Drawing.Point(241, 465);
-            this.tbxEntrada.Name = "tbxEntrada";
-            this.tbxEntrada.Size = new System.Drawing.Size(152, 20);
-            this.tbxEntrada.TabIndex = 58;
-            // 
             // lblEntrada
             // 
             this.lblEntrada.AutoSize = true;
@@ -474,13 +447,6 @@
             this.lblEntrada.Size = new System.Drawing.Size(61, 16);
             this.lblEntrada.TabIndex = 57;
             this.lblEntrada.Text = "Entrada";
-            // 
-            // tbxSaida
-            // 
-            this.tbxSaida.Location = new System.Drawing.Point(241, 518);
-            this.tbxSaida.Name = "tbxSaida";
-            this.tbxSaida.Size = new System.Drawing.Size(152, 20);
-            this.tbxSaida.TabIndex = 60;
             // 
             // lblSaida
             // 
@@ -543,7 +509,7 @@
             // 
             // mtbxInicioContrato
             // 
-            this.mtbxInicioContrato.Location = new System.Drawing.Point(278, 358);
+            this.mtbxInicioContrato.Location = new System.Drawing.Point(248, 358);
             this.mtbxInicioContrato.Mask = "00/00/0000";
             this.mtbxInicioContrato.Name = "mtbxInicioContrato";
             this.mtbxInicioContrato.Size = new System.Drawing.Size(66, 20);
@@ -561,53 +527,10 @@
             // mtbxSalario
             // 
             this.mtbxSalario.Location = new System.Drawing.Point(65, 465);
-            this.mtbxSalario.Mask = "$ 000000,00";
+            this.mtbxSalario.Mask = "$000000,00";
             this.mtbxSalario.Name = "mtbxSalario";
             this.mtbxSalario.Size = new System.Drawing.Size(100, 20);
             this.mtbxSalario.TabIndex = 69;
-            // 
-            // tbxCep
-            // 
-            this.tbxCep.Location = new System.Drawing.Point(448, 248);
-            this.tbxCep.Name = "tbxCep";
-            this.tbxCep.Size = new System.Drawing.Size(152, 20);
-            this.tbxCep.TabIndex = 41;
-            // 
-            // tbxInicioContrato
-            // 
-            this.tbxInicioContrato.Location = new System.Drawing.Point(241, 358);
-            this.tbxInicioContrato.Name = "tbxInicioContrato";
-            this.tbxInicioContrato.Size = new System.Drawing.Size(152, 20);
-            this.tbxInicioContrato.TabIndex = 31;
-            // 
-            // tbxPeriodo
-            // 
-            this.tbxPeriodo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbxPeriodo.Location = new System.Drawing.Point(45, 518);
-            this.tbxPeriodo.Name = "tbxPeriodo";
-            this.tbxPeriodo.Size = new System.Drawing.Size(152, 20);
-            this.tbxPeriodo.TabIndex = 23;
-            // 
-            // tbxSalario
-            // 
-            this.tbxSalario.Location = new System.Drawing.Point(46, 465);
-            this.tbxSalario.Name = "tbxSalario";
-            this.tbxSalario.Size = new System.Drawing.Size(152, 20);
-            this.tbxSalario.TabIndex = 37;
-            // 
-            // tbxWhatsApp
-            // 
-            this.tbxWhatsApp.Location = new System.Drawing.Point(46, 303);
-            this.tbxWhatsApp.Name = "tbxWhatsApp";
-            this.tbxWhatsApp.Size = new System.Drawing.Size(152, 20);
-            this.tbxWhatsApp.TabIndex = 25;
-            // 
-            // tbxCpfColab
-            // 
-            this.tbxCpfColab.Location = new System.Drawing.Point(44, 248);
-            this.tbxCpfColab.Name = "tbxCpfColab";
-            this.tbxCpfColab.Size = new System.Drawing.Size(152, 20);
-            this.tbxCpfColab.TabIndex = 21;
             // 
             // btnteste
             // 
@@ -619,11 +542,51 @@
             this.btnteste.UseVisualStyleBackColor = true;
             this.btnteste.Click += new System.EventHandler(this.btnteste_Click);
             // 
+            // mtbxEntrada
+            // 
+            this.mtbxEntrada.Location = new System.Drawing.Point(248, 476);
+            this.mtbxEntrada.Mask = "00:00";
+            this.mtbxEntrada.Name = "mtbxEntrada";
+            this.mtbxEntrada.Size = new System.Drawing.Size(66, 20);
+            this.mtbxEntrada.TabIndex = 71;
+            this.mtbxEntrada.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtbxSaida
+            // 
+            this.mtbxSaida.Location = new System.Drawing.Point(249, 519);
+            this.mtbxSaida.Mask = "00:00";
+            this.mtbxSaida.Name = "mtbxSaida";
+            this.mtbxSaida.Size = new System.Drawing.Size(66, 20);
+            this.mtbxSaida.TabIndex = 72;
+            this.mtbxSaida.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtbxPausas
+            // 
+            this.mtbxPausas.Location = new System.Drawing.Point(249, 248);
+            this.mtbxPausas.Mask = "00:00";
+            this.mtbxPausas.Name = "mtbxPausas";
+            this.mtbxPausas.Size = new System.Drawing.Size(66, 20);
+            this.mtbxPausas.TabIndex = 73;
+            this.mtbxPausas.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtbxRetorno
+            // 
+            this.mtbxRetorno.Location = new System.Drawing.Point(249, 303);
+            this.mtbxRetorno.Mask = "00:00";
+            this.mtbxRetorno.Name = "mtbxRetorno";
+            this.mtbxRetorno.Size = new System.Drawing.Size(66, 20);
+            this.mtbxRetorno.TabIndex = 74;
+            this.mtbxRetorno.ValidatingType = typeof(System.DateTime);
+            // 
             // CadastrarColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.mtbxRetorno);
+            this.Controls.Add(this.mtbxPausas);
+            this.Controls.Add(this.mtbxSaida);
+            this.Controls.Add(this.mtbxEntrada);
             this.Controls.Add(this.btnteste);
             this.Controls.Add(this.mtbxSalario);
             this.Controls.Add(this.mtbxCep);
@@ -632,11 +595,8 @@
             this.Controls.Add(this.mtbxCpfColab);
             this.Controls.Add(this.cbxPeriodo);
             this.Controls.Add(this.cbxStatus);
-            this.Controls.Add(this.tbxSaida);
             this.Controls.Add(this.lblSaida);
-            this.Controls.Add(this.tbxEntrada);
             this.Controls.Add(this.lblEntrada);
-            this.Controls.Add(this.tbxRetorno);
             this.Controls.Add(this.lblRetorno);
             this.Controls.Add(this.btnCadastroColab);
             this.Controls.Add(this.tbxComplemento);
@@ -651,26 +611,19 @@
             this.Controls.Add(this.lblBairro);
             this.Controls.Add(this.tbxLogradouro);
             this.Controls.Add(this.lblLogradouro);
-            this.Controls.Add(this.tbxCep);
             this.Controls.Add(this.lblCep);
             this.Controls.Add(this.tbxObservacao);
             this.Controls.Add(this.lblObservacao);
-            this.Controls.Add(this.tbxSalario);
             this.Controls.Add(this.lblSalario);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.tbxCargoAtual);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.tbxInicioContrato);
             this.Controls.Add(this.lblInicioContrato);
             this.Controls.Add(this.tbxEmailColab);
             this.Controls.Add(this.lblEmailColab);
-            this.Controls.Add(this.tbxPausas);
             this.Controls.Add(this.lblHoraPausas);
-            this.Controls.Add(this.tbxWhatsApp);
             this.Controls.Add(this.lblWhatsAppColab);
-            this.Controls.Add(this.tbxPeriodo);
             this.Controls.Add(this.lblPeriodoColab);
-            this.Controls.Add(this.tbxCpfColab);
             this.Controls.Add(this.lblCpfColab);
             this.Controls.Add(this.tbxNomeColab);
             this.Controls.Add(this.lblNomeCompleto);
@@ -699,7 +652,6 @@
         private System.Windows.Forms.TextBox tbxNomeColab;
         private System.Windows.Forms.Label lblCpfColab;
         private System.Windows.Forms.Label lblPeriodoColab;
-        private System.Windows.Forms.TextBox tbxPausas;
         private System.Windows.Forms.Label lblHoraPausas;
         private System.Windows.Forms.Label lblWhatsAppColab;
         private System.Windows.Forms.Label lblInicioContrato;
@@ -724,11 +676,8 @@
         private System.Windows.Forms.TextBox tbxComplemento;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.Button btnCadastroColab;
-        private System.Windows.Forms.TextBox tbxRetorno;
         private System.Windows.Forms.Label lblRetorno;
-        private System.Windows.Forms.TextBox tbxEntrada;
         private System.Windows.Forms.Label lblEntrada;
-        private System.Windows.Forms.TextBox tbxSaida;
         private System.Windows.Forms.Label lblSaida;
         private System.Windows.Forms.TextBox tbxNumResidencia;
         private System.Windows.Forms.ComboBox cbxStatus;
@@ -738,12 +687,10 @@
         private System.Windows.Forms.MaskedTextBox mtbxInicioContrato;
         private System.Windows.Forms.MaskedTextBox mtbxCep;
         private System.Windows.Forms.MaskedTextBox mtbxSalario;
-        private System.Windows.Forms.TextBox tbxCep;
-        private System.Windows.Forms.TextBox tbxInicioContrato;
-        private System.Windows.Forms.TextBox tbxPeriodo;
-        private System.Windows.Forms.TextBox tbxSalario;
-        private System.Windows.Forms.TextBox tbxWhatsApp;
-        private System.Windows.Forms.TextBox tbxCpfColab;
         private System.Windows.Forms.Button btnteste;
+        private System.Windows.Forms.MaskedTextBox mtbxEntrada;
+        private System.Windows.Forms.MaskedTextBox mtbxSaida;
+        private System.Windows.Forms.MaskedTextBox mtbxPausas;
+        private System.Windows.Forms.MaskedTextBox mtbxRetorno;
     }
 }
