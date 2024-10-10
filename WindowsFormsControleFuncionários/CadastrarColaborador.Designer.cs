@@ -78,6 +78,7 @@
             this.lblEntrada = new System.Windows.Forms.Label();
             this.tbxSaida = new System.Windows.Forms.TextBox();
             this.lblSaida = new System.Windows.Forms.Label();
+            this.lblCombobox = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -538,11 +539,21 @@
             this.lblSaida.TabIndex = 59;
             this.lblSaida.Text = "Saída";
             // 
+            // lblCombobox
+            // 
+            this.lblCombobox.AutoSize = true;
+            this.lblCombobox.Location = new System.Drawing.Point(490, 199);
+            this.lblCombobox.Name = "lblCombobox";
+            this.lblCombobox.Size = new System.Drawing.Size(130, 13);
+            this.lblCombobox.TabIndex = 61;
+            this.lblCombobox.Text = "ADICIONAR COMBOBOX";
+            // 
             // CadastrarColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.lblCombobox);
             this.Controls.Add(this.tbxSaida);
             this.Controls.Add(this.lblSaida);
             this.Controls.Add(this.tbxEntrada);
@@ -650,5 +661,6 @@
         private System.Windows.Forms.Label lblEntrada;
         private System.Windows.Forms.TextBox tbxSaida;
         private System.Windows.Forms.Label lblSaida;
+        private System.Windows.Forms.Label lblCombobox;
     }
 }

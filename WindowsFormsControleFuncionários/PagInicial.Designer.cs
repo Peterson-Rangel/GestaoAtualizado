@@ -42,8 +42,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCadastrarColab = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -137,6 +139,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 29);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblAcompanhamento
             // 
@@ -186,7 +189,7 @@
             // btnCadastrarColab
             // 
             this.btnCadastrarColab.FlatAppearance.BorderSize = 10;
-            this.btnCadastrarColab.Location = new System.Drawing.Point(60, 503);
+            this.btnCadastrarColab.Location = new System.Drawing.Point(60, 511);
             this.btnCadastrarColab.Name = "btnCadastrarColab";
             this.btnCadastrarColab.Size = new System.Drawing.Size(133, 23);
             this.btnCadastrarColab.TabIndex = 13;
@@ -206,11 +209,20 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(100, 277);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(625, 220);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // PagInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrarColab);
             this.Controls.Add(this.btnBuscar);
@@ -226,6 +238,7 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +260,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCadastrarColab;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

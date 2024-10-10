@@ -11,20 +11,25 @@ using System.Data.SqlClient;
 using System.Linq.Expressions;
 
 namespace WindowsFormsControleFuncionários
-{
+{//feijão   
     public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
         }
+        /*SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=PetersonRangel; Password=Pokoloko1@.;
+          Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");*/ //Servidor casa Peterson
 
-        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
-        Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");
+        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588420W10-1;Encrypt=false;"); //Servidor Senac Leandro
+
+        /*SqlConnection conexao = new SqlConnection(@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588417W10-1;Encrypt=false;");*/ //Servidor Senac Petersons
 
         SqlCommand comando = new SqlCommand();
 
-        SqlDataReader dataType;
+        SqlDataReader dataType;//
 
 
 
@@ -33,7 +38,7 @@ namespace WindowsFormsControleFuncionários
             Application.Exit();
         }
 
-
+        
         private void pbx_Olho_Login_MouseDown(object sender, MouseEventArgs e)
         {
             tbx_Senha_Login.UseSystemPasswordChar = false;
