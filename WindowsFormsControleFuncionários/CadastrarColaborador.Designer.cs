@@ -79,6 +79,15 @@
             this.mtbxSaida = new System.Windows.Forms.MaskedTextBox();
             this.mtbxPausas = new System.Windows.Forms.MaskedTextBox();
             this.mtbxRetorno = new System.Windows.Forms.MaskedTextBox();
+            this.tbxCpfColab = new System.Windows.Forms.TextBox();
+            this.tbxRetorno = new System.Windows.Forms.TextBox();
+            this.tbxWhatsApp = new System.Windows.Forms.TextBox();
+            this.tbxSalario = new System.Windows.Forms.TextBox();
+            this.tbxPausas = new System.Windows.Forms.TextBox();
+            this.tbxInicioContrato = new System.Windows.Forms.TextBox();
+            this.tbxEntrada = new System.Windows.Forms.TextBox();
+            this.tbxSaida = new System.Windows.Forms.TextBox();
+            this.tbxCep = new System.Windows.Forms.TextBox();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -578,11 +587,83 @@
             this.mtbxRetorno.TabIndex = 74;
             this.mtbxRetorno.ValidatingType = typeof(System.DateTime);
             // 
+            // tbxCpfColab
+            // 
+            this.tbxCpfColab.Location = new System.Drawing.Point(98, 248);
+            this.tbxCpfColab.Name = "tbxCpfColab";
+            this.tbxCpfColab.Size = new System.Drawing.Size(100, 20);
+            this.tbxCpfColab.TabIndex = 75;
+            // 
+            // tbxRetorno
+            // 
+            this.tbxRetorno.Location = new System.Drawing.Point(274, 303);
+            this.tbxRetorno.Name = "tbxRetorno";
+            this.tbxRetorno.Size = new System.Drawing.Size(100, 20);
+            this.tbxRetorno.TabIndex = 76;
+            // 
+            // tbxWhatsApp
+            // 
+            this.tbxWhatsApp.Location = new System.Drawing.Point(98, 303);
+            this.tbxWhatsApp.Name = "tbxWhatsApp";
+            this.tbxWhatsApp.Size = new System.Drawing.Size(100, 20);
+            this.tbxWhatsApp.TabIndex = 77;
+            // 
+            // tbxSalario
+            // 
+            this.tbxSalario.Location = new System.Drawing.Point(98, 465);
+            this.tbxSalario.Name = "tbxSalario";
+            this.tbxSalario.Size = new System.Drawing.Size(100, 20);
+            this.tbxSalario.TabIndex = 78;
+            // 
+            // tbxPausas
+            // 
+            this.tbxPausas.Location = new System.Drawing.Point(274, 248);
+            this.tbxPausas.Name = "tbxPausas";
+            this.tbxPausas.Size = new System.Drawing.Size(100, 20);
+            this.tbxPausas.TabIndex = 79;
+            // 
+            // tbxInicioContrato
+            // 
+            this.tbxInicioContrato.Location = new System.Drawing.Point(274, 358);
+            this.tbxInicioContrato.Name = "tbxInicioContrato";
+            this.tbxInicioContrato.Size = new System.Drawing.Size(100, 20);
+            this.tbxInicioContrato.TabIndex = 80;
+            // 
+            // tbxEntrada
+            // 
+            this.tbxEntrada.Location = new System.Drawing.Point(274, 476);
+            this.tbxEntrada.Name = "tbxEntrada";
+            this.tbxEntrada.Size = new System.Drawing.Size(100, 20);
+            this.tbxEntrada.TabIndex = 81;
+            // 
+            // tbxSaida
+            // 
+            this.tbxSaida.Location = new System.Drawing.Point(274, 519);
+            this.tbxSaida.Name = "tbxSaida";
+            this.tbxSaida.Size = new System.Drawing.Size(100, 20);
+            this.tbxSaida.TabIndex = 82;
+            // 
+            // tbxCep
+            // 
+            this.tbxCep.Location = new System.Drawing.Point(502, 248);
+            this.tbxCep.Name = "tbxCep";
+            this.tbxCep.Size = new System.Drawing.Size(100, 20);
+            this.tbxCep.TabIndex = 83;
+            // 
             // CadastrarColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.tbxCep);
+            this.Controls.Add(this.tbxSaida);
+            this.Controls.Add(this.tbxEntrada);
+            this.Controls.Add(this.tbxInicioContrato);
+            this.Controls.Add(this.tbxPausas);
+            this.Controls.Add(this.tbxSalario);
+            this.Controls.Add(this.tbxWhatsApp);
+            this.Controls.Add(this.tbxRetorno);
+            this.Controls.Add(this.tbxCpfColab);
             this.Controls.Add(this.mtbxRetorno);
             this.Controls.Add(this.mtbxPausas);
             this.Controls.Add(this.mtbxSaida);
@@ -692,5 +773,14 @@
         private System.Windows.Forms.MaskedTextBox mtbxSaida;
         private System.Windows.Forms.MaskedTextBox mtbxPausas;
         private System.Windows.Forms.MaskedTextBox mtbxRetorno;
+        private System.Windows.Forms.TextBox tbxCpfColab;
+        private System.Windows.Forms.TextBox tbxRetorno;
+        private System.Windows.Forms.TextBox tbxWhatsApp;
+        private System.Windows.Forms.TextBox tbxSalario;
+        private System.Windows.Forms.TextBox tbxPausas;
+        private System.Windows.Forms.TextBox tbxInicioContrato;
+        private System.Windows.Forms.TextBox tbxEntrada;
+        private System.Windows.Forms.TextBox tbxSaida;
+        private System.Windows.Forms.TextBox tbxCep;
     }
 }
