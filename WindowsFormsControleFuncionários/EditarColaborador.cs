@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WindowsFormsControleFuncionários
 {
-    public partial class CadastrarColaborador : Form
+    public partial class EditarColaborador : Form
     {
-        public CadastrarColaborador()
+        public EditarColaborador()
         {
             InitializeComponent();
         }
@@ -30,9 +29,9 @@ namespace WindowsFormsControleFuncionários
 
 
 
-
         SqlCommand comando = new SqlCommand();
         SqlDataReader dataType;
+
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -45,7 +44,8 @@ namespace WindowsFormsControleFuncionários
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-            else if (this.WindowState == FormWindowState.Maximized) { 
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
                 this.WindowState = FormWindowState.Normal;
             }
         }
@@ -55,12 +55,22 @@ namespace WindowsFormsControleFuncionários
             Application.Exit();
         }
 
-        private void btnCadastroColab_Click(object sender, EventArgs e)
+        private void EditarColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxIrAcompanhamento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditarColab_Click(object sender, EventArgs e)
         {
             if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || cbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
                 || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
                 || tbxObservacao.Text == string.Empty || tbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
-                || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text ==string.Empty)
+                || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text == string.Empty)
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos", "Cadastro Colaborador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -69,53 +79,53 @@ namespace WindowsFormsControleFuncionários
                 try
                 {
                     string nomeColaborador = tbxNomeColab.Text;
-                    string cpfColaborador = tbxCpfColab.Text; 
+                    string cpfColaborador = tbxCpfColab.Text;
                     string periodo = cbxPeriodo.Text;
 
                     //string horaEntrada = mtbxEntrada.Text; 
                     //horaEntrada = salariotexto.Replace(":", "").Trim();//
                     DateTime entrada = DateTime.Parse(tbxEntrada.Text);
-                    
+
                     //string horaSaida = mtbxSaida.Text;
                     //horaSaida = horaSaida.ToString();
                     DateTime saida = DateTime.Parse(tbxSaida.Text);
-                    
+
                     string whatsApp = tbxWhatsApp.Text;
                     string eMail = tbxEmailColab.Text;
                     string status = cbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
-                    
+
                     DateTime pausas = DateTime.Parse(tbxPausas.Text);
-                    
+
                     DateTime retorno = DateTime.Parse(tbxRetorno.Text);
-                    
+
                     string salariotexto = tbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
                     salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
                     decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
 
                     string cargo = tbxCargoAtual.Text;
-                    
+
                     string inicioCont = tbxInicioContrato.Text;
                     inicioCont = inicioCont.Replace("/", "-").Replace("/", "-").Trim();
                     DateTime inicioContrato = DateTime.Parse(inicioCont); //Tratamento de dados aqui? Sql Server == DATA
-                    
+
                     string observ = tbxObservacao.Text;
                     string cep = tbxCep.Text; // fazer API
                     string logradouro = tbxLogradouro.Text;
-                    int numResidencia = int.Parse(tbxNumResidencia.Text); //Tratamento de dados aqui? Sql Server == INT
+                    int numResidencia = int.Parse(tbxNumResidencia.Text);
                     string bairro = tbxBairro.Text;
                     string cidade = tbxCidade.Text;
                     string estado = tbxEstado.Text;
                     string complemento = tbxComplemento.Text;
 
-
-                    comando.CommandText = "insert into funcionarios(nome, cpf, whatsapp, email, data_contratacao, salario, status, observacao) values(@nome, @cpf, @whatsapp, @email, @dataInicio, @salario, @status, @observacao); " +
-                        "insert into funcoes(funcao) values(@cargo); " +
-                        "insert into enderecos_funcionarios (logradouro, numero, bairro, cidade, estado, complemento, cep) values(@logradouro, @numero, @bairro, @cidade, @estado, @complemento, @cep); " +
-                        "insert into pausas (pausa, retorno) values (@pausa, @retorno); " +
-                        "insert into periodos (periodo, entrada, saida) values (@periodo, @entrada, @saida);";
+                    //Precisa fazer um por um?
+                    comando.CommandText = "update funcionarios set (nome, cpf, whatsapp, email, data_contratacao, salario, status, observacao) where (@nome, @cpf, @whatsapp, @email, @dataInicio, @salario, @status, @observacao); " +
+                        "update funcoes set (funcao) where (@cargo); " +
+                        "update enderecos_funcionarios set (logradouro, numero, bairro, cidade, estado, complemento, cep) where (@logradouro, @numero, @bairro, @cidade, @estado, @complemento, @cep); " +
+                        "update pausas set (pausa, retorno) where (@pausa, @retorno); " +
+                        "update periodos set (periodo, entrada, saida) where (@periodo, @entrada, @saida);";
 
                     comando.Connection = conexao;
-                    comando.Parameters.Clear(); 
+                    comando.Parameters.Clear();
 
                     comando.Parameters.AddWithValue("@nome", SqlDbType.Char).Value = nomeColaborador;
                     comando.Parameters.AddWithValue("@cpf", SqlDbType.Char).Value = cpfColaborador;
@@ -128,7 +138,7 @@ namespace WindowsFormsControleFuncionários
 
                     comando.Parameters.AddWithValue("@cargo", SqlDbType.Char).Value = cargo;
 
-                    comando.Parameters.AddWithValue("@logradouro", SqlDbType.Char).Value = logradouro;                    
+                    comando.Parameters.AddWithValue("@logradouro", SqlDbType.Char).Value = logradouro;
                     comando.Parameters.AddWithValue("@bairro", SqlDbType.Char).Value = bairro;
                     comando.Parameters.AddWithValue("@numero", SqlDbType.Int).Value = numResidencia;
                     comando.Parameters.AddWithValue("@cidade", SqlDbType.Char).Value = cidade;
@@ -144,10 +154,6 @@ namespace WindowsFormsControleFuncionários
                     comando.Parameters.AddWithValue("@saida", SqlDbType.Time).Value = saida;
 
 
-
-
-
-
                     conexao.Open();
 
                     int linhasAfetadas = comando.ExecuteNonQuery();
@@ -161,48 +167,19 @@ namespace WindowsFormsControleFuncionários
                     {
                         MessageBox.Show("Usuário não foi cadastrado!");
                     }
-
                 }
-                catch (Exception erro) {
+
+                catch (Exception erro)
+                {
                     MessageBox.Show(erro.Message);
                     conexao.Close();
                 }
+
                 finally
                 {
                     conexao.Close();
                 }
             }
-        }
-
-        private void CadastrarColaborador_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnteste_Click(object sender, EventArgs e)
-        {
-            //string horaSaida = mtbxSaida.Text; 
-            //horaSaida = horaSaida.ToString();
-            //DateTime saida = DateTime.Parse(mtbxSaida.Text); //esse não precisa
-
-            //string horaEntrada = mtbxEntrada.Text;
-            //horaEntrada = horaEntrada.Replace(":", "").Trim();
-            //DateTime entrada = DateTime.Parse(mtbxEntrada.Text); //apenas esse
-
-            //string salariotexto = mtbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
-            //salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
-            //decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
-
-            //MessageBox.Show("Saída cadastrada");
-            //MessageBox.Show("Entrada cadastrada");
-            //MessageBox.Show("Salário cadastrado");
-
-
         }
     }
 }

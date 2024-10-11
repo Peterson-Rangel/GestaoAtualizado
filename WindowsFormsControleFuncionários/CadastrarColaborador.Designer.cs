@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.btnMaximizar = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblNovoColaborador = new System.Windows.Forms.Label();
             this.lblCadastroDo = new System.Windows.Forms.Label();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.lblNomeCompleto = new System.Windows.Forms.Label();
             this.tbxNomeColab = new System.Windows.Forms.TextBox();
             this.lblCpfColab = new System.Windows.Forms.Label();
@@ -88,6 +85,9 @@
             this.tbxEntrada = new System.Windows.Forms.TextBox();
             this.tbxSaida = new System.Windows.Forms.TextBox();
             this.tbxCep = new System.Windows.Forms.TextBox();
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -106,31 +106,6 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(750, 151);
             this.pnlLeft.TabIndex = 17;
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(701, 3);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(23, 23);
-            this.btnMaximizar.TabIndex = 6;
-            this.btnMaximizar.UseVisualStyleBackColor = true;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.minimize_sign;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
-            this.btnMinimizar.Location = new System.Drawing.Point(679, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(23, 23);
-            this.btnMinimizar.TabIndex = 5;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnClose
             // 
@@ -165,16 +140,6 @@
             this.lblCadastroDo.Size = new System.Drawing.Size(152, 32);
             this.lblCadastroDo.TabIndex = 2;
             this.lblCadastroDo.Text = "Cadastro do";
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.Image = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO;
-            this.pbxLogo.Location = new System.Drawing.Point(34, 23);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(121, 117);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxLogo.TabIndex = 0;
-            this.pbxLogo.TabStop = false;
             // 
             // lblNomeCompleto
             // 
@@ -649,6 +614,41 @@
             this.tbxCep.Name = "tbxCep";
             this.tbxCep.Size = new System.Drawing.Size(100, 20);
             this.tbxCep.TabIndex = 83;
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMaximizar.Location = new System.Drawing.Point(701, 3);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMaximizar.TabIndex = 6;
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.minimize_sign;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
+            this.btnMinimizar.Location = new System.Drawing.Point(679, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMinimizar.TabIndex = 5;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Image = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO;
+            this.pbxLogo.Location = new System.Drawing.Point(34, 23);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(121, 117);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogo.TabIndex = 0;
+            this.pbxLogo.TabStop = false;
             // 
             // CadastrarColaborador
             // 
