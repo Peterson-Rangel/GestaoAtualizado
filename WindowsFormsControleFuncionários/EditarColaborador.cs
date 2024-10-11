@@ -183,3 +183,121 @@ namespace WindowsFormsControleFuncionários
         }
     }
 }
+
+//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Data.SqlClient;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+//namespace WindowsFormsControleFuncionários
+//{
+//    public partial class PagInicial : Form
+//    {
+//        public PagInicial()
+//        {
+//            InitializeComponent();
+//        }
+
+//        //SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
+//        //Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");
+
+//        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=senac;Password=senac;
+//        Initial Catalog=controle;Server=TAU0588417W10-1;Encrypt=false;");
+
+
+
+//        SqlCommand comando = new SqlCommand();
+//        SqlDataReader dt;
+
+
+
+//        private void btnMaxi_Click(object sender, EventArgs e)
+//        {
+//            if (this.WindowState == FormWindowState.Normal)
+//            {
+//                this.WindowState = FormWindowState.Maximized;
+//            }
+//            else if (this.WindowState == FormWindowState.Maximized)
+//            {
+
+//                this.WindowState = FormWindowState.Normal;
+//            }
+//        }
+
+//        private void btnMini_Click(object sender, EventArgs e)
+//        {
+//            this.WindowState = FormWindowState.Minimized;
+//        }
+
+//        private void btnFechar_Click(object sender, EventArgs e)
+//        {
+//            Application.Exit();
+//        }
+
+//        private void btnSair_Click(object sender, EventArgs e)
+//        {
+//            Login returnarLogin = new Login();
+//            MessageBox.Show("Tem certeza que deseja sair?", "Desconectar?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+//            returnarLogin.Show();
+//            this.Hide();
+//        }
+
+//        private void tbxAcompanhamento_TextChanged(object sender, EventArgs e)
+//        {
+//            if (tbxAcompanhamento.Text != "")
+//            {
+//                try
+//                {
+//                    conexao.Open();
+//                    comando.CommandText = "select * from funcionarios where nome like ('%" + tbxAcompanhamento.Text + "%')";
+//                    comando.Connection = conexao;
+
+//                    SqlDataAdapter da = new SqlDataAdapter();
+
+//                    DataTable dt = new DataTable();
+
+//                    da.SelectCommand = comando;
+//                    da.Fill(dt);
+//                    dgvAcompanhamento.DataSource = dt;
+
+//                }
+//                catch (Exception erro)
+//                {
+//                    MessageBox.Show(erro.Message);
+//                    conexao.Close();
+//                }
+//                finally { conexao.Close(); }
+//            }
+//            //else
+//            //{
+//            //    dgvAcompanhamento = null;
+//            //}
+//        }
+
+//        private void carregaColaborador()
+//        {
+
+//            tbxNome.Text = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+//            //tbxNome.Text = dgvAcompanhamento.SelectedRows[0].Cells[3].Value.ToString();
+//            //tbxLogin.Text = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+//            //tbxSenha.Text = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
+//            //string valor = dgvAcompanhamento.SelectedRows[0].Cells[4].Value.ToString();
+
+//        }
+
+//        private void dgvAcompanhamento_DoubleClick(object sender, EventArgs e)
+//        {
+//            carregaColaborador();
+//            CadastrarGerente teste = new CadastrarGerente();
+//            teste.Show();
+//            this.Hide();
+//        }
+//    }
+//}
