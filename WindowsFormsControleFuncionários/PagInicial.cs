@@ -110,5 +110,5 @@ namespace WindowsFormsControleFuncionários
         {
 
         }
-    } //novo
+    } //atualizado
 }
