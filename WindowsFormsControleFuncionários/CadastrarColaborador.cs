@@ -31,6 +31,13 @@ namespace WindowsFormsControleFuncionários
         SqlCommand comando = new SqlCommand();
         SqlDataReader dataType;
 
+        
+
+        private void CadastrarColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -42,7 +49,9 @@ namespace WindowsFormsControleFuncionários
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-            else if (this.WindowState == FormWindowState.Maximized) { 
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
+
                 this.WindowState = FormWindowState.Normal;
             }
         }
@@ -54,10 +63,10 @@ namespace WindowsFormsControleFuncionários
 
         private void btnCadastroColab_Click(object sender, EventArgs e)
         {
-            if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || tbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
-                || tbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
+            if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || cbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
+                || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty
                 || tbxObservacao.Text == string.Empty || tbxCep.Text == string.Empty || tbxLogradouro.Text == string.Empty || tbxNumResidencia.Text == string.Empty || tbxBairro.Text == string.Empty
-                || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text ==string.Empty)
+                || tbxCidade.Text == string.Empty || tbxEstado.Text == string.Empty || tbxComplemento.Text == string.Empty)
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos", "Cadastro Colaborador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -67,19 +76,36 @@ namespace WindowsFormsControleFuncionários
                 {
                     string nomeColaborador = tbxNomeColab.Text;
                     string cpfColaborador = tbxCpfColab.Text;
-                    string periodo = tbxPeriodo.Text;
+                    string periodo = cbxPeriodo.Text;
+
+                    //string horaEntrada = mtbxEntrada.Text; 
+                    //horaEntrada = salariotexto.Replace(":", "").Trim();//
                     DateTime entrada = DateTime.Parse(tbxEntrada.Text);
+
+                    //string horaSaida = mtbxSaida.Text;
+                    //horaSaida = horaSaida.ToString();
                     DateTime saida = DateTime.Parse(tbxSaida.Text);
+
                     string whatsApp = tbxWhatsApp.Text;
                     string eMail = tbxEmailColab.Text;
-                    string status = tbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
+                    string status = cbxStatus.Text; // VERIFICAR TIPO DE DADOS SALVO NO SQL SERVER (PALAVRA RESERVADA)
+
                     DateTime pausas = DateTime.Parse(tbxPausas.Text);
+
                     DateTime retorno = DateTime.Parse(tbxRetorno.Text);
-                    double salario = double.Parse(tbxSalario.Text); //Tratamento de dados aqui? Sql Server == DECIMAL
+
+                    string salariotexto = tbxSalario.Text; //Tratamento de dados aqui? Sql Server == DECIMAL
+                    salariotexto = salariotexto.Replace("R$", "").Replace(" ", "").Replace(",", ".").Trim();
+                    decimal salario = decimal.Parse(salariotexto); //Tratamento de dados aqui? Sql Server == DECIMAL
+
                     string cargo = tbxCargoAtual.Text;
-                    DateTime inicioCont = DateTime.Parse(tbxInicioContrato.Text); //Tratamento de dados aqui? Sql Server == DATA
+
+                    string inicioCont = tbxInicioContrato.Text;
+                    inicioCont = inicioCont.Replace("/", "-").Replace("/", "-").Trim();
+                    DateTime inicioContrato = DateTime.Parse(inicioCont); //Tratamento de dados aqui? Sql Server == DATA
+
                     string observ = tbxObservacao.Text;
-                    string cep = tbxCep.Text; //Não Adicionado na tabela SQL SERVER
+                    string cep = tbxCep.Text; // fazer API
                     string logradouro = tbxLogradouro.Text;
                     int numResidencia = int.Parse(tbxNumResidencia.Text); //Tratamento de dados aqui? Sql Server == INT
                     string bairro = tbxBairro.Text;
@@ -88,7 +114,6 @@ namespace WindowsFormsControleFuncionários
                     string complemento = tbxComplemento.Text;
 
 
-                    //FALTA DECLARAR O RESTANTES DAS VARIAVEIS NO ADD.WITHVALLUE?
                     comando.CommandText = "insert into funcionarios(nome, cpf, whatsapp, email, data_contratacao, salario, status, observacao) values(@nome, @cpf, @whatsapp, @email, @dataInicio, @salario, @status, @observacao); " +
                         "insert into funcoes(funcao) values(@cargo); " +
                         "insert into enderecos_funcionarios (logradouro, numero, bairro, cidade, estado, complemento, cep) values(@logradouro, @numero, @bairro, @cidade, @estado, @complemento, @cep); " +
@@ -96,7 +121,7 @@ namespace WindowsFormsControleFuncionários
                         "insert into periodos (periodo, entrada, saida) values (@periodo, @entrada, @saida);";
 
                     comando.Connection = conexao;
-                    comando.Parameters.Clear(); 
+                    comando.Parameters.Clear();
 
                     comando.Parameters.AddWithValue("@nome", SqlDbType.Char).Value = nomeColaborador;
                     comando.Parameters.AddWithValue("@cpf", SqlDbType.Char).Value = cpfColaborador;
@@ -109,7 +134,7 @@ namespace WindowsFormsControleFuncionários
 
                     comando.Parameters.AddWithValue("@cargo", SqlDbType.Char).Value = cargo;
 
-                    comando.Parameters.AddWithValue("@logradouro", SqlDbType.Char).Value = logradouro;                    
+                    comando.Parameters.AddWithValue("@logradouro", SqlDbType.Char).Value = logradouro;
                     comando.Parameters.AddWithValue("@bairro", SqlDbType.Char).Value = bairro;
                     comando.Parameters.AddWithValue("@numero", SqlDbType.Int).Value = numResidencia;
                     comando.Parameters.AddWithValue("@cidade", SqlDbType.Char).Value = cidade;
@@ -126,10 +151,6 @@ namespace WindowsFormsControleFuncionários
 
 
 
-
-
-
-
                     conexao.Open();
 
                     int linhasAfetadas = comando.ExecuteNonQuery();
@@ -137,7 +158,9 @@ namespace WindowsFormsControleFuncionários
                     if (linhasAfetadas > 0)
                     {
                         MessageBox.Show("Usuário cadastrado com sucesso!");
-                        this.Close();
+                        PagInicial inicio = new PagInicial();
+                        inicio.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -145,7 +168,8 @@ namespace WindowsFormsControleFuncionários
                     }
 
                 }
-                catch (Exception erro) {
+                catch (Exception erro)
+                {
                     MessageBox.Show(erro.Message);
                     conexao.Close();
                 }
@@ -155,10 +179,7 @@ namespace WindowsFormsControleFuncionários
                 }
             }
         }
-
-        private void CadastrarColaborador_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
+

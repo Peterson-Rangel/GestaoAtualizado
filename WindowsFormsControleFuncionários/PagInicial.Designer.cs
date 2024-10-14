@@ -35,17 +35,17 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblBemVindo = new System.Windows.Forms.Label();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxAcompanhamento = new System.Windows.Forms.TextBox();
             this.lblAcompanhamento = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCadastrarColab = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAcompanhamento = new System.Windows.Forms.DataGridView();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAcompanhamento)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -131,15 +131,15 @@
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
             // 
-            // textBox1
+            // tbxAcompanhamento
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(100, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 29);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxAcompanhamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxAcompanhamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAcompanhamento.Location = new System.Drawing.Point(100, 242);
+            this.tbxAcompanhamento.Name = "tbxAcompanhamento";
+            this.tbxAcompanhamento.Size = new System.Drawing.Size(317, 29);
+            this.tbxAcompanhamento.TabIndex = 11;
+            this.tbxAcompanhamento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblAcompanhamento
             // 
@@ -195,6 +195,7 @@
             this.btnCadastrarColab.TabIndex = 13;
             this.btnCadastrarColab.Text = "Cadastrar Novo Colaborador";
             this.btnCadastrarColab.UseVisualStyleBackColor = true;
+            this.btnCadastrarColab.Click += new System.EventHandler(this.btnCadastrarColab_Click);
             // 
             // btnSair
             // 
@@ -209,25 +210,27 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // dataGridView1
+            // dgvAcompanhamento
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 277);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(625, 220);
-            this.dataGridView1.TabIndex = 15;
+            this.dgvAcompanhamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAcompanhamento.Location = new System.Drawing.Point(100, 277);
+            this.dgvAcompanhamento.Name = "dgvAcompanhamento";
+            this.dgvAcompanhamento.Size = new System.Drawing.Size(625, 220);
+            this.dgvAcompanhamento.TabIndex = 15;
+            this.dgvAcompanhamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.l);
+            this.dgvAcompanhamento.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvAcompanhamento_MouseDoubleClick);
             // 
             // PagInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAcompanhamento);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrarColab);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblAcompanhamento);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxAcompanhamento);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
@@ -238,7 +241,7 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAcompanhamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,11 +258,11 @@
         private System.Windows.Forms.Button btnMini;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblBemVindo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxAcompanhamento;
         private System.Windows.Forms.Label lblAcompanhamento;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCadastrarColab;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAcompanhamento;
     }
 }

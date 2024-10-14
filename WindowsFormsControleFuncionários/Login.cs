@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Linq.Expressions;
 
 namespace WindowsFormsControleFuncionários
-{//feijão   
+{   
     public partial class Login : Form
     {
         public Login()
@@ -29,7 +29,7 @@ namespace WindowsFormsControleFuncionários
 
         SqlCommand comando = new SqlCommand();
 
-        SqlDataReader dataType;//
+        SqlDataReader dataType;
 
 
 
