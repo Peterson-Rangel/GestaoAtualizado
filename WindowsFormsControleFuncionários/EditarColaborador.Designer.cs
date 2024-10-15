@@ -643,6 +643,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarColaborador";
             this.Text = "EditarColaborador";
+            this.Load += new System.EventHandler(this.EditarColaborador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxIrAcompanhamento)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();

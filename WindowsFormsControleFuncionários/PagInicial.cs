@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,35 @@ namespace WindowsFormsControleFuncionários
         {
             InitializeComponent();
         }
-        
+
+        //Variaveis
+        public static string nomeColab;
+        public static string cpfColab;
+        public static string whatsappColab;
+        public static string emailColab;
+        public static string cargoColab;
+        public static string salarioColab;
+        public static string periodoColab;
+
+        public static string pausaColab;
+        public static string retornoColab;
+        public static string inioContratoColab;
+        public static string statusColab;
+        public static string entradaColab;
+        public static string saidaColab;
+
+        public static string cepColab;
+        public static string logradouroColab;
+        public static string numeroColab;
+        public static string bairroColab;
+        public static string cidadeColab;
+        public static string estadoColab;
+
+        public static string complementoColab;
+        public static string observacoesColab;
+
+
+
         SqlConnection conexao = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=controle;Server=TAU0588420W10-1;");
 
         SqlCommand comando = new SqlCommand();
@@ -29,8 +58,9 @@ namespace WindowsFormsControleFuncionários
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-            else if (this.WindowState == FormWindowState.Maximized) { 
-                
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
+
                 this.WindowState = FormWindowState.Normal;
             }
         }
@@ -60,7 +90,7 @@ namespace WindowsFormsControleFuncionários
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tbxAcompanhamento_TextChanged(object sender, EventArgs e)
         {
             if (tbxAcompanhamento.Text != "")
             {
@@ -103,12 +133,49 @@ namespace WindowsFormsControleFuncionários
 
         private void dgvAcompanhamento_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (dgvAcompanhamento.SelectedRows.Count > 0)
+            {
+                carregaColaborador();
+                EditarColaborador editColab = new EditarColaborador();
+                editColab.Show();
+                this.Hide();
+            }
 
+            else
+            {
+                MessageBox.Show("Nemhuma linha foi selecionada");
+            }
         }
 
-        private void l(object sender, DataGridViewCellEventArgs e)
+        private void  carregaColaborador()
         {
 
+            nomeColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            cpfColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
+            whatsappColab = dgvAcompanhamento.SelectedRows[0].Cells[3].Value.ToString();
+            emailColab = dgvAcompanhamento.SelectedRows[0].Cells[8].Value.ToString();
+            cargoColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            salarioColab = dgvAcompanhamento.SelectedRows[0].Cells[5].Value.ToString();
+            periodoColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+
+            pausaColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            retornoColab = dgvAcompanhamento.SelectedRows[0].Cells[4].Value.ToString();
+            inioContratoColab = dgvAcompanhamento.SelectedRows[0].Cells[4].Value.ToString();
+            statusColab = dgvAcompanhamento.SelectedRows[0].Cells[7].Value.ToString();
+            entradaColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            saidaColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
+
+           /cepColab = dgvAcompanhamento.SelectedRows[0].Cells[7].Value.ToString();
+            logradouroColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            numeroColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
+            bairroColab = dgvAcompanhamento.SelectedRows[0].Cells[3].Value.ToString();
+            cidadeColab = dgvAcompanhamento.SelectedRows[0].Cells[5].Value.ToString();
+            estadoColab = dgvAcompanhamento.SelectedRows[0].Cells[6].Value.ToString();
+
+            complementoColab = dgvAcompanhamento.SelectedRows[0].Cells[4].Value.ToString();
+            observacoesColab = dgvAcompanhamento.SelectedRows[0].Cells[6].Value.ToString();
         }
-    } //atualizado
+    }
 }
+
+

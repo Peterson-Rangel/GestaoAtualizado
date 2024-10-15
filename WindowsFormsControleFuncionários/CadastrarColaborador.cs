@@ -61,7 +61,7 @@ namespace WindowsFormsControleFuncionários
             Application.Exit();
         }
 
-        private void btnCadastroColab_Click(object sender, EventArgs e)
+        public void btnCadastroColab_Click(object sender, EventArgs e)
         {
             if (tbxNomeColab.Text == string.Empty || tbxCpfColab.Text == string.Empty || cbxPeriodo.Text == string.Empty || tbxWhatsApp.Text == string.Empty || tbxEmailColab.Text == string.Empty
                 || cbxStatus.Text == string.Empty || tbxPausas.Text == string.Empty || tbxSalario.Text == string.Empty || tbxCargoAtual.Text == string.Empty || tbxInicioContrato.Text == string.Empty

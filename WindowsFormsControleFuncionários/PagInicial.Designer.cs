@@ -139,7 +139,7 @@
             this.tbxAcompanhamento.Name = "tbxAcompanhamento";
             this.tbxAcompanhamento.Size = new System.Drawing.Size(317, 29);
             this.tbxAcompanhamento.TabIndex = 11;
-            this.tbxAcompanhamento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxAcompanhamento.TextChanged += new System.EventHandler(this.tbxAcompanhamento_TextChanged);
             // 
             // lblAcompanhamento
             // 
@@ -217,7 +217,6 @@
             this.dgvAcompanhamento.Name = "dgvAcompanhamento";
             this.dgvAcompanhamento.Size = new System.Drawing.Size(625, 220);
             this.dgvAcompanhamento.TabIndex = 15;
-            this.dgvAcompanhamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.l);
             this.dgvAcompanhamento.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvAcompanhamento_MouseDoubleClick);
             // 
             // PagInicial
