@@ -16,7 +16,7 @@ namespace WindowsFormsControleFuncionários
     {
         public PagInicial()
         {
-            InitializeComponent();
+            InitializeComponent();//;Oi
         }
 
         //Variaveis
