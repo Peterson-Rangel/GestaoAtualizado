@@ -33,7 +33,7 @@
             this.btnMaxi = new System.Windows.Forms.Button();
             this.btnMini = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.lblAc = new System.Windows.Forms.Label();
+            this.lblAcompanhamento = new System.Windows.Forms.Label();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.tbxAcompanhamento = new System.Windows.Forms.TextBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(968, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.TabIndex = 7;
@@ -67,11 +67,11 @@
             this.pnlLeft.Controls.Add(this.btnMaxi);
             this.pnlLeft.Controls.Add(this.btnMini);
             this.pnlLeft.Controls.Add(this.btnFechar);
-            this.pnlLeft.Controls.Add(this.lblAc);
+            this.pnlLeft.Controls.Add(this.lblAcompanhamento);
             this.pnlLeft.Controls.Add(this.pbxLogo);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(1000, 239);
             this.pnlLeft.TabIndex = 10;
@@ -81,7 +81,7 @@
             this.btnMaxi.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
             this.btnMaxi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMaxi.Location = new System.Drawing.Point(936, 4);
-            this.btnMaxi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaxi.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxi.Name = "btnMaxi";
             this.btnMaxi.Size = new System.Drawing.Size(31, 28);
             this.btnMaxi.TabIndex = 6;
@@ -96,7 +96,7 @@
             this.btnMini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMini.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
             this.btnMini.Location = new System.Drawing.Point(907, 4);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(4);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 28);
             this.btnMini.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.Location = new System.Drawing.Point(965, 4);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(31, 28);
             this.btnFechar.TabIndex = 1;
@@ -116,23 +116,23 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // lblAc
+            // lblAcompanhamento
             // 
-            this.lblAc.AutoSize = true;
-            this.lblAc.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAc.Location = new System.Drawing.Point(345, 79);
-            this.lblAc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAc.Name = "lblAc";
-            this.lblAc.Size = new System.Drawing.Size(433, 62);
-            this.lblAc.TabIndex = 1;
-            this.lblAc.Text = "Acompanhamento";
+            this.lblAcompanhamento.AutoSize = true;
+            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcompanhamento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAcompanhamento.Location = new System.Drawing.Point(345, 79);
+            this.lblAcompanhamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAcompanhamento.Name = "lblAcompanhamento";
+            this.lblAcompanhamento.Size = new System.Drawing.Size(433, 62);
+            this.lblAcompanhamento.TabIndex = 1;
+            this.lblAcompanhamento.Text = "Acompanhamento";
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO;
             this.pbxLogo.Location = new System.Drawing.Point(44, 28);
-            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(200, 185);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             this.tbxAcompanhamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxAcompanhamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAcompanhamento.Location = new System.Drawing.Point(133, 298);
-            this.tbxAcompanhamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxAcompanhamento.Margin = new System.Windows.Forms.Padding(4);
             this.tbxAcompanhamento.Name = "tbxAcompanhamento";
             this.tbxAcompanhamento.Size = new System.Drawing.Size(422, 34);
             this.tbxAcompanhamento.TabIndex = 11;
@@ -167,7 +167,7 @@
             this.btnMaximizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMaximizar.Location = new System.Drawing.Point(939, 2);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(31, 28);
             this.btnMaximizar.TabIndex = 9;
@@ -181,7 +181,7 @@
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
             this.btnMinimizar.Location = new System.Drawing.Point(909, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(31, 28);
             this.btnMinimizar.TabIndex = 8;
@@ -191,7 +191,7 @@
             // 
             this.btnCadastrarColab.FlatAppearance.BorderSize = 10;
             this.btnCadastrarColab.Location = new System.Drawing.Point(80, 629);
-            this.btnCadastrarColab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrarColab.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrarColab.Name = "btnCadastrarColab";
             this.btnCadastrarColab.Size = new System.Drawing.Size(177, 28);
             this.btnCadastrarColab.TabIndex = 13;
@@ -205,7 +205,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Location = new System.Drawing.Point(907, 634);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(77, 28);
             this.btnSair.TabIndex = 14;
@@ -217,7 +217,7 @@
             // 
             this.dgvAcompanhamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAcompanhamento.Location = new System.Drawing.Point(133, 341);
-            this.dgvAcompanhamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAcompanhamento.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAcompanhamento.Name = "dgvAcompanhamento";
             this.dgvAcompanhamento.RowHeadersWidth = 51;
             this.dgvAcompanhamento.Size = new System.Drawing.Size(833, 271);
@@ -261,7 +261,7 @@
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PagInicial";
             this.Text = "PagInicial";
             this.pnlLeft.ResumeLayout(false);
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Button btnMaxi;
         private System.Windows.Forms.Button btnMini;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Label lblAc;
+        private System.Windows.Forms.Label lblAcompanhamento;
         private System.Windows.Forms.TextBox tbxAcompanhamento;
         private System.Windows.Forms.Label lblPesquisa;
         private System.Windows.Forms.Button btnCadastrarColab;

@@ -322,34 +322,43 @@ namespace WindowsFormsControleFuncionários
             }
         }
 
-        private void EditarColaborador_Load(object sender, EventArgs e)
+        //private void EditarColaborador_Load(object sender, EventArgs e)
+        //{
+        //    lblFuncionarioId.Text = PagInicial.id_funcionario;
+        //    tbxNomeColab.Text = PagInicial.nomeColab;
+        //    tbxCpfColab.Text = PagInicial.cpfColab;
+        //    tbxWhatsApp.Text = PagInicial.whatsappColab;
+        //    tbxEmailColab.Text = PagInicial.emailColab;
+        //    tbxCargoAtual.Text = PagInicial.cargoColab;
+        //    tbxSalario.Text = PagInicial.salarioColab;
+        //    cbxPeriodo.Text = PagInicial.periodoColab;
+
+        //    tbxPausas.Text = PagInicial.pausaColab;
+        //    tbxRetorno.Text = PagInicial.retornoColab;
+        //    tbxInicioContrato.Text = PagInicial.inicioContratoColab;
+        //    cbxStatus.Text = PagInicial.statusColab;
+        //    //tbxEntrada.Text = PagInicial.entradaColab;
+        //    //tbxSaida.Text = PagInicial.saidaColab;
+
+        //    tbxCep.Text = PagInicial.cepColab;
+        //    tbxLogradouro.Text = PagInicial.logradouroColab;
+        //    tbxNumResidencia.Text = PagInicial.numeroColab;
+        //    tbxBairro.Text = PagInicial.bairroColab;
+        //    tbxCidade.Text = PagInicial.cidadeColab;
+        //    tbxEstado.Text = PagInicial.estadoColab;
+
+        //    tbxComplemento.Text = PagInicial.complementoColab;
+        //    tbxObservacao.Text = PagInicial.observacoesColab;
+        //}
+
+        private void lblRetornarPara_Click(object sender, EventArgs e)
         {
-            lblFuncionarioId.Text = PagInicial.id_funcionario;
-            tbxNomeColab.Text = PagInicial.nomeColab;
-            tbxCpfColab.Text = PagInicial.cpfColab;
-            tbxWhatsApp.Text = PagInicial.whatsappColab;
-            tbxEmailColab.Text = PagInicial.emailColab;
-            tbxCargoAtual.Text = PagInicial.cargoColab;
-            tbxSalario.Text = PagInicial.salarioColab;
-            cbxPeriodo.Text = PagInicial.periodoColab;
 
-            tbxPausas.Text = PagInicial.pausaColab;
-            tbxRetorno.Text = PagInicial.retornoColab;
-            tbxInicioContrato.Text = PagInicial.inicioContratoColab;
-            cbxStatus.Text = PagInicial.statusColab;
-            //tbxEntrada.Text = PagInicial.entradaColab;
-            //tbxSaida.Text = PagInicial.saidaColab;
-
-            tbxCep.Text = PagInicial.cepColab;
-            tbxLogradouro.Text = PagInicial.logradouroColab;
-            tbxNumResidencia.Text = PagInicial.numeroColab;
-            tbxBairro.Text = PagInicial.bairroColab;
-            tbxCidade.Text = PagInicial.cidadeColab;
-            tbxEstado.Text = PagInicial.estadoColab;
-
-            tbxComplemento.Text = PagInicial.complementoColab;
-            tbxObservacao.Text = PagInicial.observacoesColab;
         }
 
+        private void lblAcompanhamento_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

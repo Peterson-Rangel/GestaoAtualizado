@@ -67,8 +67,6 @@ namespace WindowsFormsControleFuncionários
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-
-
         }
 
         private void tbxUsuario_Login_TextChanged(object sender, EventArgs e)

@@ -94,6 +94,7 @@
             this.lblAcompanhamento.Size = new System.Drawing.Size(157, 20);
             this.lblAcompanhamento.TabIndex = 234;
             this.lblAcompanhamento.Text = "Acompanhamento";
+            this.lblAcompanhamento.Click += new System.EventHandler(this.lblAcompanhamento_Click);
             // 
             // pbxIrAcompanhamento
             // 
@@ -117,6 +118,7 @@
             this.lblRetornarPara.Size = new System.Drawing.Size(131, 20);
             this.lblRetornarPara.TabIndex = 233;
             this.lblRetornarPara.Text = "Retornar  para";
+            this.lblRetornarPara.Click += new System.EventHandler(this.lblRetornarPara_Click);
             // 
             // tbxCep
             // 
@@ -663,7 +665,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditarColaborador";
             this.Text = "EditarColaborador";
-            this.Load += new System.EventHandler(this.EditarColaborador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxIrAcompanhamento)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();

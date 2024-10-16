@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avaliacao.Designer.cs">
+      <DependentUpon>Avaliacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarColaborador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="SenhaAlterada.Designer.cs">
       <DependentUpon>SenhaAlterada.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Avaliacao.resx">
+      <DependentUpon>Avaliacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarColaborador.resx">
       <DependentUpon>CadastrarColaborador.cs</DependentUpon>
     </EmbeddedResource>

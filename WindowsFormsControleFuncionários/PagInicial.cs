@@ -33,9 +33,7 @@ namespace WindowsFormsControleFuncionários
         public static string retornoColab;
         public static string inicioContratoColab;
         public static string statusColab;
-        //public static string entradaColab;
-        //public static string saidaColab;
-
+        
         public static string cepColab;
         public static string logradouroColab;
         public static string numeroColab;
@@ -46,11 +44,18 @@ namespace WindowsFormsControleFuncionários
         public static string complementoColab;
         public static string observacoesColab;
 
+        public static string entradaColab;
+        public static string saidaColab;
+        public static string horaPausaColab;
+        public static string horaRetornoColab;
+        public static string comentariosColab;
+        public static string dataAumentoColab;
+
 
 
         //SqlConnection conexao = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=controle;Server=TAU0588420W10-1;");
         SqlConnection conexao = new SqlConnection(@"Persist Security Info=False;User ID=sa;Password=2024aiiiminhavuaida;Initial Catalog=controle;Server=LAPTOP-VOJU9E07;");
-
+  
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
 
@@ -137,9 +142,13 @@ namespace WindowsFormsControleFuncionários
         {
             if (dgvAcompanhamento.SelectedRows.Count > 0)
             {
-                carregaColaborador();
-                EditarColaborador editColab = new EditarColaborador();
-                editColab.Show();
+                //carregaColaborador();
+                //EditarColaborador editColab = new EditarColaborador();
+                //editColab.Show();
+
+                //carregaAvaliacao();
+                Avaliacao avaliaColab = new Avaliacao();
+                avaliaColab.Show();
                 this.Hide();
             }
 
@@ -164,8 +173,6 @@ namespace WindowsFormsControleFuncionários
             retornoColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
             inicioContratoColab = dgvAcompanhamento.SelectedRows[0].Cells[5].Value.ToString();
             statusColab = dgvAcompanhamento.SelectedRows[0].Cells[6].Value.ToString();
-            //entradaColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
-            //saidaColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
 
             cepColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
             logradouroColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
@@ -176,6 +183,17 @@ namespace WindowsFormsControleFuncionários
 
             complementoColab = dgvAcompanhamento.SelectedRows[0].Cells[7].Value.ToString();
             observacoesColab = dgvAcompanhamento.SelectedRows[0].Cells[7].Value.ToString();
+        }
+        
+        private void carregaAvaliacao()
+
+        {   
+            entradaColab = dgvAcompanhamento.SelectedRows[0].Cells[1].Value.ToString();
+            saidaColab = dgvAcompanhamento.SelectedRows[0].Cells[2].Value.ToString();
+            horaPausaColab = dgvAcompanhamento.SelectedRows[0].Cells[3].Value.ToString();
+            horaRetornoColab = dgvAcompanhamento.SelectedRows[0].Cells[4].Value.ToString();
+            comentariosColab = dgvAcompanhamento.SelectedRows[0].Cells[6].Value.ToString();
+            dataAumentoColab = dgvAcompanhamento.SelectedRows[0].Cells[7].Value.ToString();
         }
     }
 }
