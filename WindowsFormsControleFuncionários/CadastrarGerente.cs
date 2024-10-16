@@ -21,8 +21,18 @@ namespace WindowsFormsControleFuncionários
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
-        Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");
+        /*SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
+        Initial Catalog=controle;Server=PETERSON-RANGEL;Encrypt=false;");*///Peterson
+
+        SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=sa;Password=2024aiiiminhavuaida;
+        Initial Catalog=controle;Server=LAPTOP-VOJU9E07;Encrypt=false;");//Leandro
+
+        /*SqlConnection conexao = new SqlConnection (@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588417W10-1;Encrypt=false;");*///Senac Peterson
+
+        /*SqlConnection conexao = new SqlConnection(@"Persist Security Info=true; User ID=senac; Password=senac;
+        Initial Catalog=controle;Server=TAU0588420W10-1;Encrypt=false;");*/// Senac Leandro
+
 
         SqlCommand comando = new SqlCommand();
 

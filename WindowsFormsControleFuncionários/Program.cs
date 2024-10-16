@@ -16,7 +16,7 @@ namespace WindowsFormsControleFuncionários
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EditarColaborador());
+            Application.Run(new PagInicial());
         }
     }
 }

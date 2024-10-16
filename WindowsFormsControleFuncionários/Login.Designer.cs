@@ -37,7 +37,6 @@
             this.pbxUsuario_Login = new System.Windows.Forms.PictureBox();
             this.tbxUsuario_Login = new System.Windows.Forms.TextBox();
             this.btnAcessar = new System.Windows.Forms.Button();
-            this.lnkEsqueceu_Senha = new System.Windows.Forms.LinkLabel();
             this.btn_Cadastrar_User = new System.Windows.Forms.Button();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.Button();
@@ -65,17 +64,19 @@
             this.pnlAcesso_Login.Controls.Add(this.tbx_Senha_Login);
             this.pnlAcesso_Login.Controls.Add(this.pbxUsuario_Login);
             this.pnlAcesso_Login.Controls.Add(this.tbxUsuario_Login);
-            this.pnlAcesso_Login.Location = new System.Drawing.Point(224, 273);
+            this.pnlAcesso_Login.Location = new System.Drawing.Point(299, 336);
+            this.pnlAcesso_Login.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAcesso_Login.Name = "pnlAcesso_Login";
-            this.pnlAcesso_Login.Size = new System.Drawing.Size(312, 170);
+            this.pnlAcesso_Login.Size = new System.Drawing.Size(416, 209);
             this.pnlAcesso_Login.TabIndex = 1;
             // 
             // pbx_Olho_Login
             // 
             this.pbx_Olho_Login.Image = global::WindowsFormsControleFuncionários.Properties.Resources.eye__1_;
-            this.pbx_Olho_Login.Location = new System.Drawing.Point(250, 118);
+            this.pbx_Olho_Login.Location = new System.Drawing.Point(333, 145);
+            this.pbx_Olho_Login.Margin = new System.Windows.Forms.Padding(4);
             this.pbx_Olho_Login.Name = "pbx_Olho_Login";
-            this.pbx_Olho_Login.Size = new System.Drawing.Size(42, 26);
+            this.pbx_Olho_Login.Size = new System.Drawing.Size(56, 32);
             this.pbx_Olho_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_Olho_Login.TabIndex = 6;
             this.pbx_Olho_Login.TabStop = false;
@@ -87,9 +88,10 @@
             // 
             this.lblSenha_Login.AutoSize = true;
             this.lblSenha_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha_Login.Location = new System.Drawing.Point(80, 96);
+            this.lblSenha_Login.Location = new System.Drawing.Point(107, 118);
+            this.lblSenha_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha_Login.Name = "lblSenha_Login";
-            this.lblSenha_Login.Size = new System.Drawing.Size(51, 16);
+            this.lblSenha_Login.Size = new System.Drawing.Size(61, 20);
             this.lblSenha_Login.TabIndex = 5;
             this.lblSenha_Login.Text = "Senha";
             // 
@@ -97,18 +99,20 @@
             // 
             this.lblUsuario_Login.AutoSize = true;
             this.lblUsuario_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario_Login.Location = new System.Drawing.Point(79, 13);
+            this.lblUsuario_Login.Location = new System.Drawing.Point(105, 16);
+            this.lblUsuario_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario_Login.Name = "lblUsuario_Login";
-            this.lblUsuario_Login.Size = new System.Drawing.Size(51, 16);
+            this.lblUsuario_Login.Size = new System.Drawing.Size(63, 20);
             this.lblUsuario_Login.TabIndex = 4;
             this.lblUsuario_Login.Text = "E-mail";
             // 
             // pbxCadeado_Login
             // 
             this.pbxCadeado_Login.Image = global::WindowsFormsControleFuncionários.Properties.Resources.trancar;
-            this.pbxCadeado_Login.Location = new System.Drawing.Point(21, 99);
+            this.pbxCadeado_Login.Location = new System.Drawing.Point(28, 122);
+            this.pbxCadeado_Login.Margin = new System.Windows.Forms.Padding(4);
             this.pbxCadeado_Login.Name = "pbxCadeado_Login";
-            this.pbxCadeado_Login.Size = new System.Drawing.Size(50, 50);
+            this.pbxCadeado_Login.Size = new System.Drawing.Size(67, 62);
             this.pbxCadeado_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxCadeado_Login.TabIndex = 3;
             this.pbxCadeado_Login.TabStop = false;
@@ -116,18 +120,20 @@
             // tbx_Senha_Login
             // 
             this.tbx_Senha_Login.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Senha_Login.Location = new System.Drawing.Point(77, 114);
+            this.tbx_Senha_Login.Location = new System.Drawing.Point(103, 140);
+            this.tbx_Senha_Login.Margin = new System.Windows.Forms.Padding(4);
             this.tbx_Senha_Login.Name = "tbx_Senha_Login";
-            this.tbx_Senha_Login.Size = new System.Drawing.Size(218, 33);
+            this.tbx_Senha_Login.Size = new System.Drawing.Size(289, 39);
             this.tbx_Senha_Login.TabIndex = 2;
             this.tbx_Senha_Login.UseSystemPasswordChar = true;
             // 
             // pbxUsuario_Login
             // 
             this.pbxUsuario_Login.Image = global::WindowsFormsControleFuncionários.Properties.Resources.do_utilizador;
-            this.pbxUsuario_Login.Location = new System.Drawing.Point(20, 17);
+            this.pbxUsuario_Login.Location = new System.Drawing.Point(27, 21);
+            this.pbxUsuario_Login.Margin = new System.Windows.Forms.Padding(4);
             this.pbxUsuario_Login.Name = "pbxUsuario_Login";
-            this.pbxUsuario_Login.Size = new System.Drawing.Size(50, 50);
+            this.pbxUsuario_Login.Size = new System.Drawing.Size(67, 62);
             this.pbxUsuario_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUsuario_Login.TabIndex = 1;
             this.pbxUsuario_Login.TabStop = false;
@@ -135,39 +141,32 @@
             // tbxUsuario_Login
             // 
             this.tbxUsuario_Login.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUsuario_Login.Location = new System.Drawing.Point(76, 32);
+            this.tbxUsuario_Login.Location = new System.Drawing.Point(101, 39);
+            this.tbxUsuario_Login.Margin = new System.Windows.Forms.Padding(4);
             this.tbxUsuario_Login.Name = "tbxUsuario_Login";
-            this.tbxUsuario_Login.Size = new System.Drawing.Size(218, 33);
+            this.tbxUsuario_Login.Size = new System.Drawing.Size(289, 39);
             this.tbxUsuario_Login.TabIndex = 0;
             this.tbxUsuario_Login.TextChanged += new System.EventHandler(this.tbxUsuario_Login_TextChanged);
             // 
             // btnAcessar
             // 
             this.btnAcessar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcessar.Location = new System.Drawing.Point(461, 453);
+            this.btnAcessar.Location = new System.Drawing.Point(535, 558);
+            this.btnAcessar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAcessar.Name = "btnAcessar";
-            this.btnAcessar.Size = new System.Drawing.Size(75, 23);
+            this.btnAcessar.Size = new System.Drawing.Size(100, 28);
             this.btnAcessar.TabIndex = 2;
             this.btnAcessar.Text = "Acessar";
             this.btnAcessar.UseVisualStyleBackColor = true;
             this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
-            // lnkEsqueceu_Senha
-            // 
-            this.lnkEsqueceu_Senha.AutoSize = true;
-            this.lnkEsqueceu_Senha.Location = new System.Drawing.Point(221, 458);
-            this.lnkEsqueceu_Senha.Name = "lnkEsqueceu_Senha";
-            this.lnkEsqueceu_Senha.Size = new System.Drawing.Size(104, 13);
-            this.lnkEsqueceu_Senha.TabIndex = 3;
-            this.lnkEsqueceu_Senha.TabStop = true;
-            this.lnkEsqueceu_Senha.Text = "Esqueceu a Senha?";
-            // 
             // btn_Cadastrar_User
             // 
             this.btn_Cadastrar_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar_User.Location = new System.Drawing.Point(361, 453);
+            this.btn_Cadastrar_User.Location = new System.Drawing.Point(346, 558);
+            this.btn_Cadastrar_User.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar_User.Name = "btn_Cadastrar_User";
-            this.btn_Cadastrar_User.Size = new System.Drawing.Size(91, 23);
+            this.btn_Cadastrar_User.Size = new System.Drawing.Size(121, 28);
             this.btn_Cadastrar_User.TabIndex = 4;
             this.btn_Cadastrar_User.Text = "Cadastrar";
             this.btn_Cadastrar_User.UseVisualStyleBackColor = true;
@@ -185,17 +184,19 @@
             this.pnlLeft.Controls.Add(this.pbxLogo);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(750, 194);
+            this.pnlLeft.Size = new System.Drawing.Size(1000, 239);
             this.pnlLeft.TabIndex = 0;
             // 
             // btnMaximizar
             // 
             this.btnMaximizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(702, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(936, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMaximizar.Size = new System.Drawing.Size(31, 28);
             this.btnMaximizar.TabIndex = 6;
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -207,9 +208,10 @@
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
-            this.btnMinimizar.Location = new System.Drawing.Point(680, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(907, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 28);
             this.btnMinimizar.TabIndex = 5;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -218,9 +220,10 @@
             // 
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(724, 3);
+            this.btnClose.Location = new System.Drawing.Point(965, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(23, 23);
+            this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -229,60 +232,65 @@
             // lblLogin3
             // 
             this.lblLogin3.AutoSize = true;
-            this.lblLogin3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin3.Location = new System.Drawing.Point(213, 125);
+            this.lblLogin3.Location = new System.Drawing.Point(530, 131);
+            this.lblLogin3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin3.Name = "lblLogin3";
-            this.lblLogin3.Size = new System.Drawing.Size(173, 32);
+            this.lblLogin3.Size = new System.Drawing.Size(143, 28);
             this.lblLogin3.TabIndex = 3;
             this.lblLogin3.Text = "Carga Horária";
             // 
             // lblLogin2
             // 
             this.lblLogin2.AutoSize = true;
-            this.lblLogin2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin2.Location = new System.Drawing.Point(212, 85);
+            this.lblLogin2.Location = new System.Drawing.Point(286, 131);
+            this.lblLogin2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin2.Name = "lblLogin2";
-            this.lblLogin2.Size = new System.Drawing.Size(284, 32);
+            this.lblLogin2.Size = new System.Drawing.Size(236, 28);
             this.lblLogin2.TabIndex = 2;
             this.lblLogin2.Text = "Sistema Gerenciador de";
+            this.lblLogin2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblLogin1
             // 
             this.lblLogin1.AutoSize = true;
-            this.lblLogin1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin1.Location = new System.Drawing.Point(213, 45);
+            this.lblLogin1.Location = new System.Drawing.Point(284, 55);
+            this.lblLogin1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin1.Name = "lblLogin1";
-            this.lblLogin1.Size = new System.Drawing.Size(174, 32);
+            this.lblLogin1.Size = new System.Drawing.Size(520, 54);
             this.lblLogin1.TabIndex = 1;
-            this.lblLogin1.Text = "Bem Vindo ao";
+            this.lblLogin1.Text = "Bem Vindo ao Gestão PRO";
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO;
-            this.pbxLogo.Location = new System.Drawing.Point(33, 23);
+            this.pbxLogo.Location = new System.Drawing.Point(44, 28);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(150, 150);
+            this.pbxLogo.Size = new System.Drawing.Size(200, 185);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(750, 550);
+            this.ClientSize = new System.Drawing.Size(1000, 677);
             this.Controls.Add(this.btn_Cadastrar_User);
-            this.Controls.Add(this.lnkEsqueceu_Senha);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.pnlAcesso_Login);
             this.Controls.Add(this.pnlLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(750, 550);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(2560, 1329);
+            this.MinimumSize = new System.Drawing.Size(1000, 677);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -295,7 +303,6 @@
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -315,7 +322,6 @@
         private System.Windows.Forms.Button btnAcessar;
         private System.Windows.Forms.Label lblSenha_Login;
         private System.Windows.Forms.Label lblUsuario_Login;
-        private System.Windows.Forms.LinkLabel lnkEsqueceu_Senha;
         private System.Windows.Forms.Button btn_Cadastrar_User;
         private System.Windows.Forms.PictureBox pbx_Olho_Login;
         private System.Windows.Forms.Button btnMinimizar;

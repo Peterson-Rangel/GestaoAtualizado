@@ -58,12 +58,6 @@
     <Compile Include="CadastrarGerente.Designer.cs">
       <DependentUpon>CadastrarGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastroConfirmado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroConfirmado.Designer.cs">
-      <DependentUpon>CadastroConfirmado.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditarColaborador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +95,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarGerente.resx">
       <DependentUpon>CadastrarGerente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroConfirmado.resx">
-      <DependentUpon>CadastroConfirmado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarColaborador.resx">
       <DependentUpon>EditarColaborador.cs</DependentUpon>
