@@ -16,7 +16,7 @@ namespace WindowsFormsControleFuncionários
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PagInicial());
+            Application.Run(new Login());
         }
     }
 }
