@@ -70,6 +70,12 @@
     <Compile Include="EditarColaborador.Designer.cs">
       <DependentUpon>EditarColaborador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Esqueceu sua senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esqueceu sua senha.Designer.cs">
+      <DependentUpon>Esqueceu sua senha.cs</DependentUpon>
+    </Compile>
     <Compile Include="InserirNovaSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +96,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SenhaAlterada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SenhaAlterada.Designer.cs">
-      <DependentUpon>SenhaAlterada.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Avaliacao.resx">
       <DependentUpon>Avaliacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarColaborador.resx">
       <DependentUpon>EditarColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esqueceu sua senha.resx">
+      <DependentUpon>Esqueceu sua senha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InserirNovaSenha.resx">
       <DependentUpon>InserirNovaSenha.cs</DependentUpon>
@@ -127,9 +130,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SenhaAlterada.resx">
-      <DependentUpon>SenhaAlterada.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
