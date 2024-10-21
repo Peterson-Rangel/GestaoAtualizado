@@ -17,6 +17,7 @@ namespace WindowsFormsControleFuncionários
         public Login()
         {
             InitializeComponent();
+            habilitaBotoes();
         }
 
         /*SqlConnection conexao = new SqlConnection(@"Persist Security Info=true;User ID=PetersonRangel;Password=Pokoloko1@.;
@@ -33,15 +34,26 @@ namespace WindowsFormsControleFuncionários
 
         SqlCommand comando = new SqlCommand();
 
-        SqlDataReader dataType;
+        SqlDataReader dr;
 
+        private void habilitaBotoes() 
+        { 
+            btnAcessar.Enabled = true;
+            btn_Cadastrar_User.Enabled = true;
+            lnklblEsqueci.Enabled = true; 
+        }
 
+        private void desabilitaBotoes()
+        {
+            btnAcessar.Enabled = false;
+            btn_Cadastrar_User.Enabled = false;
+            lnklblEsqueci.Enabled = false;
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
 
         private void pbx_Olho_Login_MouseDown(object sender, MouseEventArgs e)
         {
@@ -63,15 +75,12 @@ namespace WindowsFormsControleFuncionários
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-            } else if (this.WindowState == FormWindowState.Normal)
+            } 
+            
+            else if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-        }
-
-        private void tbxUsuario_Login_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAcessar_Click(object sender, EventArgs e)
@@ -87,9 +96,9 @@ namespace WindowsFormsControleFuncionários
                     conexao.Open();
                     comando.CommandText = "select * from usuarios where email = ('" + tbxUsuario_Login.Text + "') and senha = ('" + tbx_Senha_Login.Text + "')";
                     comando.Connection = conexao;
-                    dataType = comando.ExecuteReader();
+                    dr = comando.ExecuteReader();
 
-                    if (dataType.HasRows)
+                    if (dr.HasRows)
                     {
                         PagInicial inicio = new PagInicial();
                         inicio.Show();
@@ -101,7 +110,6 @@ namespace WindowsFormsControleFuncionários
                         tbxUsuario_Login.Clear();
                         tbx_Senha_Login.Clear();
                         tbxUsuario_Login.Focus();
-
                     }
                 }
                 catch (Exception erro)
@@ -113,30 +121,32 @@ namespace WindowsFormsControleFuncionários
                 {
                     conexao.Close();
                 }
-            } 
+            }
 
         }
 
         private void btn_Cadastrar_User_Click(object sender, EventArgs e)
-        {
-            try
+        { 
+                try
+                {
+                    CadastrarGerente telaGerente = new CadastrarGerente();
+                    telaGerente.Show();
+                    desabilitaBotoes();
+                    this.Hide();
+                }
+            
+
+            catch (Exception erro) 
             {
-                CadastrarGerente telaGerente = new CadastrarGerente();
-                telaGerente.Show();
-            }
-            catch(Exception erro) {
                 MessageBox.Show(erro.Message);                
             }
         }
 
-        private void pbx_Olho_Login_Click(object sender, EventArgs e)
+        private void lnklblEsqueci_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void lnkEsqueceu_Senha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
+            InserirNovaSenha novaSenha = new InserirNovaSenha();
+            novaSenha.Show();
+            this.Hide();
         }
     }
 }

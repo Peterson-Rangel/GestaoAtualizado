@@ -70,11 +70,11 @@
     <Compile Include="EditarColaborador.Designer.cs">
       <DependentUpon>EditarColaborador.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsirirNovaSenha.cs">
+    <Compile Include="InserirNovaSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsirirNovaSenha.Designer.cs">
-      <DependentUpon>InsirirNovaSenha.cs</DependentUpon>
+    <Compile Include="InserirNovaSenha.Designer.cs">
+      <DependentUpon>InserirNovaSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="EditarColaborador.resx">
       <DependentUpon>EditarColaborador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsirirNovaSenha.resx">
-      <DependentUpon>InsirirNovaSenha.cs</DependentUpon>
+    <EmbeddedResource Include="InserirNovaSenha.resx">
+      <DependentUpon>InserirNovaSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

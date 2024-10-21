@@ -36,11 +36,13 @@ namespace WindowsFormsControleFuncionários
 
         SqlCommand comando = new SqlCommand();
 
-        SqlDataReader dataType;
+        SqlDataReader dr;
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            Login login = new Login();
+            login.Show();
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace WindowsFormsControleFuncionários
 
         private void CadastrarGerente_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pnlLeft_Paint(object sender, PaintEventArgs e)
@@ -70,10 +72,12 @@ namespace WindowsFormsControleFuncionários
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
-            if (tbxNome.Text == "" || tbxEmail.Text == "" || tbxCPF.Text == "" || tbxSenha.Text == "" || tbxConfirmar.Text == "")
+            if (tbxNome.Text == "" || tbxEmail.Text == "" || mtbxCPF.Text == "" || tbxSenha.Text == "" || tbxConfirmar.Text == "")
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if (tbxConfirmar.Text != tbxSenha.Text)
+            } 
+            
+            else if (tbxConfirmar.Text != tbxSenha.Text)
             {
                 //CONFIRMAÇÃO E SENHA / Lógica de igualdade de senha
 
@@ -83,22 +87,21 @@ namespace WindowsFormsControleFuncionários
             
             else
             {
-
                 try
                 {
-                    string nomeC = tbxNome.Text;
-                    string emailC = tbxEmail.Text;
-                    string cpfC = tbxCPF.Text;
-                    string senhaC = tbxSenha.Text;
+                    string nomeG = tbxNome.Text;
+                    string emailG = tbxEmail.Text;
+                    string cpfG = mtbxCPF.Text;
+                    string senhaG = tbxSenha.Text;
                     
                     //comando.CommandText = "insert into usuarios values nome = ('" + tbxNome.Text + "') and email = ('" + tbxEmail.Text + "') and cpf = ('" + tbxCPF.Text + "') and senha = ('" + tbxSenha.Text + "') and confirmar_senha = ('" + tbxConfirmar.Text + "')";
                     comando.CommandText = "insert into usuarios (nome, email, cpf, senha) values (@nome, @email, @cpf, @senha);";
                     comando.Connection = conexao;
                     comando.Parameters.Clear();
-                    comando.Parameters.AddWithValue("@nome", SqlDbType.Char).Value = nomeC;
-                    comando.Parameters.AddWithValue("@email", SqlDbType.Char).Value = emailC;
-                    comando.Parameters.AddWithValue("@cpf", SqlDbType.Char).Value = cpfC;
-                    comando.Parameters.AddWithValue("@senha", SqlDbType.Char).Value = senhaC;
+                    comando.Parameters.AddWithValue("@nome", SqlDbType.Char).Value = nomeG;
+                    comando.Parameters.AddWithValue("@email", SqlDbType.Char).Value = emailG;
+                    comando.Parameters.AddWithValue("@cpf", SqlDbType.Char).Value = cpfG;
+                    comando.Parameters.AddWithValue("@senha", SqlDbType.Char).Value = senhaG;
 
                     conexao.Open();
 
@@ -107,7 +110,10 @@ namespace WindowsFormsControleFuncionários
                     {
                         MessageBox.Show("Usuário cadastrado com sucesso!");
                         this.Close();
+                        Login login = new Login(); 
+                        login.Show();
                     }
+                    
                     else
                     {
                         MessageBox.Show("Usuário não foi cadastrado!");

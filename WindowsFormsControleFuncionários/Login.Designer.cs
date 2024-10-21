@@ -1,5 +1,5 @@
 ﻿namespace WindowsFormsControleFuncionários
-{//Ai minha vuaida
+{
     partial class Login
     {
         /// <summary>
@@ -46,6 +46,7 @@
             this.lblLogin2 = new System.Windows.Forms.Label();
             this.lblLogin1 = new System.Windows.Forms.Label();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.lnklblEsqueci = new System.Windows.Forms.LinkLabel();
             this.pnlAcesso_Login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Olho_Login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadeado_Login)).BeginInit();
@@ -80,7 +81,6 @@
             this.pbx_Olho_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_Olho_Login.TabIndex = 6;
             this.pbx_Olho_Login.TabStop = false;
-            this.pbx_Olho_Login.Click += new System.EventHandler(this.pbx_Olho_Login_Click);
             this.pbx_Olho_Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbx_Olho_Login_MouseDown);
             this.pbx_Olho_Login.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbx_Olho_Login_MouseUp);
             // 
@@ -146,12 +146,11 @@
             this.tbxUsuario_Login.Name = "tbxUsuario_Login";
             this.tbxUsuario_Login.Size = new System.Drawing.Size(289, 39);
             this.tbxUsuario_Login.TabIndex = 0;
-            this.tbxUsuario_Login.TextChanged += new System.EventHandler(this.tbxUsuario_Login_TextChanged);
             // 
             // btnAcessar
             // 
             this.btnAcessar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcessar.Location = new System.Drawing.Point(535, 558);
+            this.btnAcessar.Location = new System.Drawing.Point(299, 558);
             this.btnAcessar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(100, 28);
@@ -163,7 +162,7 @@
             // btn_Cadastrar_User
             // 
             this.btn_Cadastrar_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar_User.Location = new System.Drawing.Point(346, 558);
+            this.btn_Cadastrar_User.Location = new System.Drawing.Point(435, 558);
             this.btn_Cadastrar_User.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar_User.Name = "btn_Cadastrar_User";
             this.btn_Cadastrar_User.Size = new System.Drawing.Size(121, 28);
@@ -234,7 +233,7 @@
             this.lblLogin3.AutoSize = true;
             this.lblLogin3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin3.Location = new System.Drawing.Point(530, 131);
+            this.lblLogin3.Location = new System.Drawing.Point(525, 131);
             this.lblLogin3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin3.Name = "lblLogin3";
             this.lblLogin3.Size = new System.Drawing.Size(143, 28);
@@ -277,12 +276,25 @@
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
             // 
+            // lnklblEsqueci
+            // 
+            this.lnklblEsqueci.AutoSize = true;
+            this.lnklblEsqueci.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnklblEsqueci.Location = new System.Drawing.Point(582, 562);
+            this.lnklblEsqueci.Name = "lnklblEsqueci";
+            this.lnklblEsqueci.Size = new System.Drawing.Size(134, 20);
+            this.lnklblEsqueci.TabIndex = 5;
+            this.lnklblEsqueci.TabStop = true;
+            this.lnklblEsqueci.Text = "Esqueci o e-mail";
+            this.lnklblEsqueci.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueci_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1000, 677);
+            this.Controls.Add(this.lnklblEsqueci);
             this.Controls.Add(this.btn_Cadastrar_User);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.pnlAcesso_Login);
@@ -303,6 +315,7 @@
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -326,6 +339,7 @@
         private System.Windows.Forms.PictureBox pbx_Olho_Login;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.LinkLabel lnklblEsqueci;
     }
 }
 

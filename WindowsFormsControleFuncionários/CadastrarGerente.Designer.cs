@@ -45,10 +45,10 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
-            this.tbxCPF = new System.Windows.Forms.TextBox();
             this.lclCPF = new System.Windows.Forms.Label();
             this.btnOlhoConfirmar = new System.Windows.Forms.Button();
             this.btnOlhoSenha = new System.Windows.Forms.Button();
+            this.mtbxCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlLeft.SuspendLayout();
             this.SuspendLayout();
@@ -57,9 +57,10 @@
             // 
             this.btnMaximizar.BackgroundImage = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO__3___1_;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(701, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(935, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMaximizar.Size = new System.Drawing.Size(31, 28);
             this.btnMaximizar.TabIndex = 6;
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -71,9 +72,10 @@
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.Image = global::WindowsFormsControleFuncionários.Properties.Resources.maximize;
-            this.btnMinimizar.Location = new System.Drawing.Point(679, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(905, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 28);
             this.btnMinimizar.TabIndex = 5;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -82,9 +84,10 @@
             // 
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(723, 3);
+            this.btnClose.Location = new System.Drawing.Point(964, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(23, 23);
+            this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -95,9 +98,10 @@
             this.lblLogin3.AutoSize = true;
             this.lblLogin3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin3.Location = new System.Drawing.Point(207, 103);
+            this.lblLogin3.Location = new System.Drawing.Point(276, 127);
+            this.lblLogin3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin3.Name = "lblLogin3";
-            this.lblLogin3.Size = new System.Drawing.Size(173, 32);
+            this.lblLogin3.Size = new System.Drawing.Size(214, 41);
             this.lblLogin3.TabIndex = 3;
             this.lblLogin3.Text = "Carga Horária";
             // 
@@ -106,18 +110,20 @@
             this.lblLogin2.AutoSize = true;
             this.lblLogin2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin2.Location = new System.Drawing.Point(206, 63);
+            this.lblLogin2.Location = new System.Drawing.Point(275, 78);
+            this.lblLogin2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin2.Name = "lblLogin2";
-            this.lblLogin2.Size = new System.Drawing.Size(284, 32);
+            this.lblLogin2.Size = new System.Drawing.Size(350, 41);
             this.lblLogin2.TabIndex = 2;
             this.lblLogin2.Text = "Sistema Gerenciador de";
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::WindowsFormsControleFuncionários.Properties.Resources.Gestão_PRO;
-            this.pbxLogo.Location = new System.Drawing.Point(34, 23);
+            this.pbxLogo.Location = new System.Drawing.Point(45, 28);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(121, 117);
+            this.pbxLogo.Size = new System.Drawing.Size(161, 144);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
@@ -127,9 +133,10 @@
             this.lblLogin1.AutoSize = true;
             this.lblLogin1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogin1.Location = new System.Drawing.Point(207, 23);
+            this.lblLogin1.Location = new System.Drawing.Point(276, 28);
+            this.lblLogin1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin1.Name = "lblLogin1";
-            this.lblLogin1.Size = new System.Drawing.Size(174, 32);
+            this.lblLogin1.Size = new System.Drawing.Size(214, 41);
             this.lblLogin1.TabIndex = 1;
             this.lblLogin1.Text = "Bem Vindo ao";
             // 
@@ -145,8 +152,9 @@
             this.pnlLeft.Controls.Add(this.pbxLogo);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(750, 160);
+            this.pnlLeft.Size = new System.Drawing.Size(1000, 197);
             this.pnlLeft.TabIndex = 5;
             this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
@@ -154,9 +162,10 @@
             // 
             this.btnCriar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCriar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriar.Location = new System.Drawing.Point(267, 450);
+            this.btnCriar.Location = new System.Drawing.Point(356, 554);
+            this.btnCriar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCriar.Name = "btnCriar";
-            this.btnCriar.Size = new System.Drawing.Size(223, 40);
+            this.btnCriar.Size = new System.Drawing.Size(297, 49);
             this.btnCriar.TabIndex = 20;
             this.btnCriar.Text = "Criar acesso";
             this.btnCriar.UseVisualStyleBackColor = true;
@@ -166,9 +175,10 @@
             // 
             this.tbxConfirmar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxConfirmar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxConfirmar.Location = new System.Drawing.Point(390, 284);
+            this.tbxConfirmar.Location = new System.Drawing.Point(520, 350);
+            this.tbxConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.tbxConfirmar.Name = "tbxConfirmar";
-            this.tbxConfirmar.Size = new System.Drawing.Size(236, 33);
+            this.tbxConfirmar.Size = new System.Drawing.Size(313, 39);
             this.tbxConfirmar.TabIndex = 19;
             this.tbxConfirmar.UseSystemPasswordChar = true;
             // 
@@ -176,9 +186,10 @@
             // 
             this.lblConfirmar.AutoSize = true;
             this.lblConfirmar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmar.Location = new System.Drawing.Point(385, 252);
+            this.lblConfirmar.Location = new System.Drawing.Point(513, 310);
+            this.lblConfirmar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfirmar.Name = "lblConfirmar";
-            this.lblConfirmar.Size = new System.Drawing.Size(175, 30);
+            this.lblConfirmar.Size = new System.Drawing.Size(228, 37);
             this.lblConfirmar.TabIndex = 18;
             this.lblConfirmar.Text = "Confirmar senha";
             // 
@@ -186,9 +197,10 @@
             // 
             this.tbxSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSenha.Location = new System.Drawing.Point(390, 196);
+            this.tbxSenha.Location = new System.Drawing.Point(520, 241);
+            this.tbxSenha.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSenha.Name = "tbxSenha";
-            this.tbxSenha.Size = new System.Drawing.Size(236, 33);
+            this.tbxSenha.Size = new System.Drawing.Size(313, 39);
             this.tbxSenha.TabIndex = 17;
             this.tbxSenha.UseSystemPasswordChar = true;
             // 
@@ -196,9 +208,10 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(385, 163);
+            this.lblSenha.Location = new System.Drawing.Point(513, 201);
+            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(73, 30);
+            this.lblSenha.Size = new System.Drawing.Size(94, 37);
             this.lblSenha.TabIndex = 16;
             this.lblSenha.Text = "Senha";
             // 
@@ -206,18 +219,20 @@
             // 
             this.tbxEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(46, 280);
+            this.tbxEmail.Location = new System.Drawing.Point(61, 345);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(236, 33);
+            this.tbxEmail.Size = new System.Drawing.Size(313, 39);
             this.tbxEmail.TabIndex = 15;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(41, 247);
+            this.lblEmail.Location = new System.Drawing.Point(55, 304);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(66, 30);
+            this.lblEmail.Size = new System.Drawing.Size(87, 37);
             this.lblEmail.TabIndex = 14;
             this.lblEmail.Text = "Email";
             // 
@@ -225,9 +240,10 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(41, 172);
+            this.lblNome.Location = new System.Drawing.Point(55, 212);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(172, 30);
+            this.lblNome.Size = new System.Drawing.Size(225, 37);
             this.lblNome.TabIndex = 13;
             this.lblNome.Text = "Nome completo";
             // 
@@ -235,27 +251,20 @@
             // 
             this.tbxNome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxNome.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNome.Location = new System.Drawing.Point(46, 205);
+            this.tbxNome.Location = new System.Drawing.Point(61, 252);
+            this.tbxNome.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(236, 33);
+            this.tbxNome.Size = new System.Drawing.Size(313, 39);
             this.tbxNome.TabIndex = 12;
-            // 
-            // tbxCPF
-            // 
-            this.tbxCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxCPF.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCPF.Location = new System.Drawing.Point(46, 369);
-            this.tbxCPF.Name = "tbxCPF";
-            this.tbxCPF.Size = new System.Drawing.Size(236, 33);
-            this.tbxCPF.TabIndex = 24;
             // 
             // lclCPF
             // 
             this.lclCPF.AutoSize = true;
             this.lclCPF.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lclCPF.Location = new System.Drawing.Point(48, 336);
+            this.lclCPF.Location = new System.Drawing.Point(64, 414);
+            this.lclCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lclCPF.Name = "lclCPF";
-            this.lclCPF.Size = new System.Drawing.Size(50, 30);
+            this.lclCPF.Size = new System.Drawing.Size(65, 37);
             this.lclCPF.TabIndex = 23;
             this.lclCPF.Text = "CPF";
             // 
@@ -265,9 +274,10 @@
             this.btnOlhoConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOlhoConfirmar.FlatAppearance.BorderSize = 0;
             this.btnOlhoConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOlhoConfirmar.Location = new System.Drawing.Point(628, 286);
+            this.btnOlhoConfirmar.Location = new System.Drawing.Point(837, 352);
+            this.btnOlhoConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnOlhoConfirmar.Name = "btnOlhoConfirmar";
-            this.btnOlhoConfirmar.Size = new System.Drawing.Size(31, 31);
+            this.btnOlhoConfirmar.Size = new System.Drawing.Size(41, 38);
             this.btnOlhoConfirmar.TabIndex = 25;
             this.btnOlhoConfirmar.UseVisualStyleBackColor = true;
             this.btnOlhoConfirmar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOlhoConfirmar_MouseDown);
@@ -279,22 +289,32 @@
             this.btnOlhoSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOlhoSenha.FlatAppearance.BorderSize = 0;
             this.btnOlhoSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOlhoSenha.Location = new System.Drawing.Point(628, 197);
+            this.btnOlhoSenha.Location = new System.Drawing.Point(837, 242);
+            this.btnOlhoSenha.Margin = new System.Windows.Forms.Padding(4);
             this.btnOlhoSenha.Name = "btnOlhoSenha";
-            this.btnOlhoSenha.Size = new System.Drawing.Size(31, 31);
+            this.btnOlhoSenha.Size = new System.Drawing.Size(41, 38);
             this.btnOlhoSenha.TabIndex = 26;
             this.btnOlhoSenha.UseVisualStyleBackColor = true;
             this.btnOlhoSenha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOlhoSenha_MouseDown);
             this.btnOlhoSenha.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOlhoSenha_MouseUp);
             // 
+            // mtbxCPF
+            // 
+            this.mtbxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbxCPF.Location = new System.Drawing.Point(61, 457);
+            this.mtbxCPF.Mask = "000.000.000-00";
+            this.mtbxCPF.Name = "mtbxCPF";
+            this.mtbxCPF.Size = new System.Drawing.Size(313, 34);
+            this.mtbxCPF.TabIndex = 27;
+            // 
             // CadastrarGerente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 550);
+            this.ClientSize = new System.Drawing.Size(1000, 677);
+            this.Controls.Add(this.mtbxCPF);
             this.Controls.Add(this.btnOlhoSenha);
             this.Controls.Add(this.btnOlhoConfirmar);
-            this.Controls.Add(this.tbxCPF);
             this.Controls.Add(this.lclCPF);
             this.Controls.Add(this.btnCriar);
             this.Controls.Add(this.tbxConfirmar);
@@ -307,6 +327,7 @@
             this.Controls.Add(this.tbxNome);
             this.Controls.Add(this.pnlLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastrarGerente";
             this.Text = "CadastrarGerente";
             this.Load += new System.EventHandler(this.CadastrarGerente_Load);
@@ -337,9 +358,9 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox tbxNome;
-        private System.Windows.Forms.TextBox tbxCPF;
         private System.Windows.Forms.Label lclCPF;
         private System.Windows.Forms.Button btnOlhoConfirmar;
         private System.Windows.Forms.Button btnOlhoSenha;
+        private System.Windows.Forms.MaskedTextBox mtbxCPF;
     }
 }
